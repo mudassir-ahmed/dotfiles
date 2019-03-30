@@ -2,7 +2,8 @@
 
 # This script copies all the dot files that I want a back up of
 # into a folder and backs it up on GitHub.
-# Maybe the script should work the other way round i.e. copies to the desired locations (edits get made here first)- so we can have good a commit history.
+# Maybe the script should work the other way round i.e. copies to the desired
+# locations (edits get made here first)- so we can have good a commit history.
 
 # Copy .zshrc file here.
 cp ~/.zshrc .
