@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# if $ws10 is changed in config this script will break
+ws10="10: UNIVERSITY"
+
+# Initialise workspace environment for university
+# Can break if variables in i3 config file change
+i3-msg "workspace $ws10; append_layout ~/.config/i3/workspace-uom.json"
+
+# Make workspace swallow google chrome
+google-chrome
+
+# Make workspace swallow ssh window
+# ssh -t gives a virtual terminal - which is required here
+gnome-terminal --hide-menubar --role="ssh-terminal" -e 'ssh -t mmappmab@kilburn.cs.manchester.ac.uk'
+
+# Make workspace swallow another terminal
+gnome-terminal --hide-menubar --role="misc-terminal"
