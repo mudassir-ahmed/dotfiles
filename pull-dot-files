@@ -6,6 +6,7 @@
 # locations (edits get made here first)- so we can have good a commit history.
 
 # Copy .zshrc file here.
+# Note this script does not copy the contents of ~/.oh-my-zsh/
 cp ~/.zshrc .
 
 # Copy fonts here.

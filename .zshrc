@@ -77,6 +77,7 @@ MAGIC_ENTER_OTHER_COMMAND='ls'
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   zsh-autosuggestions
+  zsh-syntax-highlighting
   magic-enter
   copybuffer
   git
