@@ -64,12 +64,6 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Remove rught powerlevel9k prompt
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
-# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/magic-enter
-MAGIC_ENTER_GIT_COMMAND='git status -u .'
-#MAGIC_ENTER_OTHER_COMMAND='colorls -l --report --group-directories-first --git-status'
-MAGIC_ENTER_OTHER_COMMAND='ls'
-
-
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -78,7 +72,6 @@ MAGIC_ENTER_OTHER_COMMAND='ls'
 plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
-  magic-enter
   copybuffer
   git
   git-prompt
@@ -123,9 +116,6 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=$(which vim)
 export VISUAL=$(which vim)
 
-# Use a vi-style line editing interface.
-# Docs https://www.gnu.org/software/bash/manual/bashref.html#Readline-vi-Mode
-set -o vi
 
 # User configuration
 
@@ -146,6 +136,12 @@ set -o vi
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Use a vi-style line editing interface.
+# Docs https://www.gnu.org/software/bash/manual/bashref.html#Readline-vi-Mode
+# This makes some plugins for oh-my-zsh such as magic-enter break.
+set -o vi
+
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
