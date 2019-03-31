@@ -99,6 +99,8 @@ alias zshconfig='vim ~/.zshrc'
 alias i3config='vim ~/.config/i3/config'
 alias i3dir='cd ~/.config/i3/'
 
+alias vimconfig='vim ~/.vimrc'
+
 alias soundconfig='pavucontrol'
 
 alias javacoursework='cd ~/Desktop/gitlab/COMP16212/'
