@@ -14,6 +14,9 @@ cp -r ~/.fonts/ .
 # Copy i3 window manager config files here.
 cp -r ~/.config/i3/ .
 
+# Copy .vimrc file here.
+cp ~/.vimrc .
+
 git add .
 git commit -m "dot files backup"
 git push
