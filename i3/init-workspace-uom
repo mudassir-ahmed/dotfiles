@@ -8,10 +8,11 @@ ws10="10: UNIVERSITY"
 i3-msg "workspace $ws10; append_layout ~/.config/i3/workspace-uom.json"
 
 # Make workspace swallow google chrome
-google-chrome
+google-chrome &
 
 # Make workspace swallow ssh window
 # ssh -t gives a virtual terminal - which is required here
+# Notice how WM_WINDOW_ROLE(STRING) value changes (use xprop to check)
 gnome-terminal --hide-menubar --role="ssh-terminal" -e 'ssh -t mmappmab@kilburn.cs.manchester.ac.uk'
 
 # Make workspace swallow another terminal

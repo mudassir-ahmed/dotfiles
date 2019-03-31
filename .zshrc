@@ -96,6 +96,7 @@ alias tree='colorls --tree'
 alias zshconfig='vim ~/.zshrc'
 
 alias i3config='vim ~/.config/i3/config'
+alias i3dir='cd ~/.config/i3/'
 
 alias soundconfig='pavucontrol'
 

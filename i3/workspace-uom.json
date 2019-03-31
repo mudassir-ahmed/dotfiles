@@ -16,7 +16,7 @@
                "x": 0,
                "y": 0
             },
-            "name": "i3-save-tree --workspace 3 > ~/.config/i3/workspace-uom.json",
+            "name": "ssh-termina - this will most likely be replaced",
             "percent": 0.5,
             "swallows": [
               {
@@ -36,7 +36,7 @@
                "x": 0,
                "y": 0
             },
-            "name": "mudassir@workstation: ~",
+            "name": "misc-terminal - this will most likely be replaced",
             "percent": 0.5,
             "swallows": [
               {
@@ -50,7 +50,7 @@
 }
 
 {
-    "border": "none",
+    "border": "normal",
     "current_border_width": 2,
     "floating": "auto_off",
     "geometry": {
@@ -59,7 +59,7 @@
        "x": 1930,
        "y": 10
     },
-    "name": "New Tab - Google Chrome",
+    "name": "Google Chrome - this will most likely be replaced",
     "percent": 0.5,
     "swallows": [
       {
