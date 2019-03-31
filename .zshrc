@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/mudassir/.oh-my-zsh"
+export ZSH="/home/mudassir/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -85,7 +85,6 @@ plugins=(
   colored-man-pages
   history
   npm
-  pip
 )
 
 #source $(dirname $(gem which colorls))/tab_complete.sh
@@ -116,6 +115,14 @@ export PATH="$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin
 
 source $ZSH/oh-my-zsh.sh
 
+# Default editors
+export EDITOR=$(which vim)
+export VISUAL=$(which vim)
+
+# Use a vi-style line editing interface.
+# Docs https://www.gnu.org/software/bash/manual/bashref.html#Readline-vi-Mode
+set -o vi
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -134,7 +141,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
