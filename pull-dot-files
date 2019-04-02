@@ -18,6 +18,3 @@ cp -r ~/.config/i3/ .
 # Copy .vimrc file here.
 cp ~/.vimrc .
 
-git add .
-git commit -m "dot files backup"
-git push
