@@ -19,6 +19,15 @@ Plug 'airblade/vim-gitgutter'
 " Goyo plugin - distraction free vim.
 Plug 'junegunn/goyo.vim'
 
+" Nerdtree shows tree view of filesystem.
+Plug 'scrooloose/nerdtree'
+
+" Atom one dark theme for vim.
+Plug 'joshdick/onedark.vim'
+
+" Preview colours in source code for support languages while editing.
+Plug 'ap/vim-css-color'
+
 " Initialize plugin system.
 call plug#end()
 
@@ -31,6 +40,16 @@ aug end
 " Theme.
 syntax on
 colorscheme onedark
+
+" Toggle NERDTree.
+map <C-n> :NERDTreeToggle<CR>
+
+" Close vim if only window left open is a NERDTree.
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Change the default arrows.
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " Always wrap long lines.
 set wrap
@@ -53,6 +72,3 @@ set shiftwidth=4
 " Show (partial) command in the last line of the screen.
 " And shows useful info in visual mode.
 set showcmd
-
-" ALSO USED:
-" https://github.com/joshdick/onedark.vim
