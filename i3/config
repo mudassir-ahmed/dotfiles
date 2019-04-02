@@ -223,3 +223,7 @@ exec_always feh --bg-fill  ~/Pictures/background.jpg
 
 # Assign Goolge Chrome to workspace 2
 #assign [class="^Google-chrome$"] $ws2
+
+# Screenshots.
+bindsym $mod+Shift+Print exec gnome-screenshot -a 
+bindsym       $mod+Print exec gnome-screenshot 
