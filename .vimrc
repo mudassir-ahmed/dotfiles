@@ -31,6 +31,12 @@ Plug 'ap/vim-css-color'
 " Emmet plugin for vim.
 Plug 'mattn/emmet-vim'
 
+" Plugin for vim-airline.
+Plug 'vim-airline/vim-airline'
+
+" Plugin to use themes for vim-airline.
+Plug 'vim-airline/vim-airline-themes'
+
 " Initialize plugin system.
 call plug#end()
 
@@ -42,6 +48,10 @@ aug end
 
 " Theme.
 syntax on
+let g:onedark_hide_endofbuffer=0
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
+let g:airline_theme='onedark'
 colorscheme onedark
 
 " Toggle NERDTree.
