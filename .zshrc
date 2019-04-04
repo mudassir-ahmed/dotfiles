@@ -142,6 +142,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # This makes some plugins for oh-my-zsh such as magic-enter break.
 set -o vi
 
+# Go to Desktop since I like working there.
+cd ~/Desktop/
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
