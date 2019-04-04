@@ -28,6 +28,9 @@ Plug 'joshdick/onedark.vim'
 " Preview colours in source code for support languages while editing.
 Plug 'ap/vim-css-color'
 
+" Emmet plugin for vim.
+Plug 'mattn/emmet-vim'
+
 " Initialize plugin system.
 call plug#end()
 
@@ -50,6 +53,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Change the default arrows.
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+" Enable emmet for just for html/css
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css EmmetInstall
 
 " Always wrap long lines.
 set wrap
