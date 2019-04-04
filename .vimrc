@@ -22,6 +22,9 @@ Plug 'junegunn/goyo.vim'
 " Nerdtree shows tree view of filesystem.
 Plug 'scrooloose/nerdtree'
 
+" Fuzzy finder for vim - search for files.
+" Plug 'junegunn/fzf'
+
 " Atom one dark theme for vim.
 Plug 'joshdick/onedark.vim'
 
