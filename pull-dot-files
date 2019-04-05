@@ -18,3 +18,5 @@ cp -r ~/.config/i3/ .
 # Copy .vimrc file here.
 cp ~/.vimrc .
 
+# Copy gtk.css file.
+cp ~/.config/gtk-3.0/gtk.css .
