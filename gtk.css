@@ -1,0 +1,44 @@
+/**
+ * Author: Mudassir Ahmed
+ * Script location: /home/mudassir/.config/gtk-3.0
+ * Created on: 05/04/2019
+ * Reference: https://developer.gnome.org/gtk3/stable/GtkScrollbar.html
+ *            https://lazka.github.io/pgi-docs/Gtk-3.0/classes/Scrollbar.html
+ */
+
+scrollbar
+{
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+    background-color: #21252d;
+}
+
+scrollbar button
+{
+    background-color: green;
+}
+
+scrollbar,
+scrollbar slider
+{
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 0;
+    border: none;
+    transition: 0.3s;
+}
+
+scrollbar slider
+{
+    background-color: #495263;
+}
+
+scrollbar slider:hover
+{
+    background-color: #353b48;
+}
+
+scrollbar slider:active
+{
+    background-color: #303640;
+}
