@@ -59,12 +59,16 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Add new line after prompt.
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-# Remove rught powerlevel9k prompt
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+# Customise icons used for multi-line prompt.
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
 
-# Which plugins would you like to load?
+# Disable right prompt.
+POWERLEVEL9K_DISABLE_RPROMPT=true
+
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -93,6 +97,8 @@ alias i3config='vim ~/.config/i3/config'
 alias i3dir='cd ~/.config/i3/'
 
 alias vimconfig='vim ~/.vimrc'
+
+alias gtkstyles='vim ~/.config/gtk-3.0/gtk.css'
 
 alias soundconfig='pavucontrol'
 
