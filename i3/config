@@ -227,3 +227,6 @@ exec_always feh --bg-fill  ~/Pictures/background.jpg
 # Screenshots.
 bindsym $mod+Shift+Print exec gnome-screenshot -a 
 bindsym       $mod+Print exec gnome-screenshot 
+
+# Shortcut to open Google Chrome.
+bindsym $mod+g exec google-chrome
