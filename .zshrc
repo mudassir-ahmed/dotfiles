@@ -84,7 +84,7 @@ plugins=(
 #source $(dirname $(gem which colorls))/tab_complete.sh
 
 alias ll='colorls -lA --sd --group-directories-first'
-alias ls='colorls --group-directories-first'
+alias ls='colorls --group-directories-first --git-status'
 alias tree='colorls --tree'
 
 alias zshconfig='vim ~/.zshrc'
