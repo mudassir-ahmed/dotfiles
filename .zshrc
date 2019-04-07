@@ -114,7 +114,7 @@ LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=36:*.rpm=90'
 export LS_COLORS
 
 # My path customisations
-export PATH="$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:$PATH"
+export PATH="$HOME/.dropbox-dist:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
