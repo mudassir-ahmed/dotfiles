@@ -148,6 +148,10 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # This makes some plugins for oh-my-zsh such as magic-enter break.
 set -o vi
 
+# When you press v, launch current line in full screen editor.
+# See edit-command-line in zshcontrib.
+bindkey -M vicmd v edit-command-line
+
 # Go to Desktop since I like working there.
 cd ~/Desktop/
 
