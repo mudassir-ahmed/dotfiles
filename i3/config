@@ -221,7 +221,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # launch wallpaper on i3 startup and reload
-exec_always --no-startup-id feh --bg-scale --no-xinerama  ~/.config/i3/background.jpg
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/background.jpg
 
 # Assign Goolge Chrome to workspace 2
 #assign [class="^Google-chrome$"] $ws2
