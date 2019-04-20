@@ -40,6 +40,12 @@ Plug 'vim-airline/vim-airline'
 " Plugin to use themes for vim-airline.
 Plug 'vim-airline/vim-airline-themes'
 
+" Plugin to manipulate surrounding vim objects 
+Plug 'tpope/vim-surround'
+
+" Plugin to add powerful commetary support
+Plug 'tpope/vim-commentary'
+
 " Initialize plugin system.
 call plug#end()
 
