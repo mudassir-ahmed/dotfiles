@@ -113,8 +113,13 @@ alias uomsshx='ssh -X mmappmab@kilburn.cs.manchester.ac.uk'
 LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=36:*.rpm=90'
 export LS_COLORS
 
+# quick fix by using alias instead of PATH
+alias idea='/home/mudassir/programs/idea-IC-191.7141.44/bin/idea.sh'
+
 # My path customisations
-export PATH="$HOME/.dropbox-dist:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:$PATH"
+export PATH="$HOME/programs/flutter/bin:$HOME/.dropbox-dist:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:$PATH"
+
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -152,8 +157,6 @@ set -o vi
 # See edit-command-line in zshcontrib.
 bindkey -M vicmd v edit-command-line
 
-# Go to Desktop since I like working there.
-cd ~/Desktop/
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
