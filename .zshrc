@@ -1,6 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# http://zsh.sourceforge.net/Doc/zsh_a4.pdf
+# Use of hook function.
+# This function is executed before each prompt.
+# We take advantage of this by saving the working directory of the last used terminal i.e. terminal that created the most recented prompt.
+precmd() {
+    pwd > /tmp/whereami
+}
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mudassir/.oh-my-zsh"
 
@@ -74,6 +82,8 @@ POWERLEVEL9K_DISABLE_RPROMPT=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  docker
+  docker-compose
   zsh-autosuggestions
   zsh-syntax-highlighting
   copybuffer
@@ -117,7 +127,7 @@ export LS_COLORS
 alias idea='/home/mudassir/programs/idea-IC-191.7141.44/bin/idea.sh'
 
 # My path customisations
-export PATH="$HOME/programs/flutter/bin:$HOME/.dropbox-dist:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:$PATH"
+export PATH="$HOME/opt/flutter/bin:$HOME/opt/android-studio/bin:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:$PATH"
 
 
 
