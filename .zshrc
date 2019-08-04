@@ -97,6 +97,10 @@ plugins=(
 
 #source $(dirname $(gem which colorls))/tab_complete.sh
 
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+
 alias ll='colorls -lA --sd --group-directories-first'
 alias ls='colorls --group-directories-first --git-status'
 alias tree='colorls --tree'
