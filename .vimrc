@@ -98,3 +98,9 @@ set shiftwidth=4
 " Show (partial) command in the last line of the screen.
 " And shows useful info in visual mode.
 set showcmd
+
+"make jj do esc
+inoremap jj <Esc>
+
+"make esc do nothing
+"inoremap <Esc> <Nop>
