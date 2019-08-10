@@ -18,5 +18,11 @@ cp -r ~/.config/i3/ .
 # Copy .vimrc file here.
 cp ~/.vimrc .
 
+# Store a copy of installed vscode extensions.
+code --list-extensions --show-versions > vscode/extensions
+
+# Store a copy of vscode config.
+cp ~/.config/Code/User/settings.json ./vscode
+
 # Copy gtk.css file.
 cp ~/.config/gtk-3.0/gtk.css .
