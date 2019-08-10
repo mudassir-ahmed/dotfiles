@@ -112,6 +112,8 @@ alias i3dir='cd ~/.config/i3/'
 
 alias vimconfig='vim ~/.vimrc'
 
+alias codeconfig="code $HOME/.config/Code/User/settings.json"
+
 alias gtkstyles='vim ~/.config/gtk-3.0/gtk.css'
 
 alias soundconfig='pavucontrol'
