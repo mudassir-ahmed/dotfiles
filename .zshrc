@@ -120,6 +120,9 @@ alias soundconfig='pavucontrol'
 
 alias javacoursework='cd ~/Desktop/gitlab/COMP16212/'
 
+alias github='cd ~/Desktop/github'
+alias gitlab='cd ~/Desktop/gitlab'
+
 # Run script that launches uom workspace
 alias uomws='~/.config/i3/init-workspace-uom'
 
