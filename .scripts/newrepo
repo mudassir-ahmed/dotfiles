@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# This script allows you to create repos from the command line
+
+# Configuration for script
+USER='mudassir-ahmed'
+REPO=$1
+
+# Access environment variables
+source ~/.ENV
+
+# Use GitHub API v3 to create repo
+curl https://api.github.com/user/repos\?access_token\=$GITHUB_ACCESS_TOKEN -d "{\"name\":\"$REPO\", \"private\":\"true\"}"
+
+# Init git
+git init
+
+# Add origin
+git remote add origin git@github.com:$USER/$REPO.git

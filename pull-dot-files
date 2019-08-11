@@ -26,3 +26,6 @@ cp ~/.config/Code/User/settings.json ./vscode
 
 # Copy gtk.css file.
 cp ~/.config/gtk-3.0/gtk.css .
+
+# Copy custom scripts directory.
+cp -r ~/.scripts .

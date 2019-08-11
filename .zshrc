@@ -21,6 +21,12 @@ ZSH_THEME="spaceship"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
+# Load environment variables
+source ~/.ENV
+
+# Load github repo creation script
+alias newrepo='~/.scripts/newrepo'
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
