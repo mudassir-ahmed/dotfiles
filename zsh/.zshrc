@@ -12,13 +12,8 @@ precmd() {
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mudassir/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+# Set name of the theme to load
 ZSH_THEME="spaceship"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Load environment variables
@@ -26,53 +21,6 @@ source ~/.ENV
 
 # Load github repo creation script
 alias newrepo='~/.scripts/newrepo'
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Add new line after prompt.
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -101,37 +49,32 @@ plugins=(
   npm
 )
 
-#source $(dirname $(gem which colorls))/tab_complete.sh
+###
+# Aliases
+##
 
+# Git
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
 
-alias ll='colorls -lA --sd --group-directories-first'
-alias ls='colorls --group-directories-first --git-status'
-alias tree='colorls --tree'
-
+# Quick configs
 alias zshconfig='vim ~/.zshrc'
-
 alias i3config='vim ~/.config/i3/config'
-alias i3dir='cd ~/.config/i3/'
-
 alias vimconfig='vim ~/.vimrc'
-
 alias codeconfig="code $HOME/.config/Code/User/settings.json"
-
-alias gtkstyles='vim ~/.config/gtk-3.0/gtk.css'
+alias gtkconfig='vim ~/.config/gtk-3.0/gtk.css'
 
 alias soundconfig='pavucontrol'
 
-alias javacoursework='cd ~/Desktop/gitlab/COMP16212/'
-
+# Quick directory changes
 alias github='cd ~/Desktop/github'
 alias gitlab='cd ~/Desktop/gitlab'
 
 # Run script that launches uom workspace
 alias uomws='~/.config/i3/init-workspace-uom'
 
+# SSH
 alias uomssh='ssh mmappmab@kilburn.cs.manchester.ac.uk'
 alias uomsshx='ssh -X mmappmab@kilburn.cs.manchester.ac.uk'
 
