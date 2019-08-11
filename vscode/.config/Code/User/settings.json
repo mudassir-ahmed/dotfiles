@@ -51,5 +51,6 @@
     "<C-a>": false,
     "<C-f>": false
   },
-  "vim.camelCaseMotion.enable": true
+  "vim.camelCaseMotion.enable": true,
+  "workbench.colorTheme": "Github"
 }
