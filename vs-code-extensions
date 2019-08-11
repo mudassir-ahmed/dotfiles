@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Store a copy of installed vscode extensions.
+code --list-extensions --show-versions > vscode/extensions
+
