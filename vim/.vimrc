@@ -104,3 +104,9 @@ inoremap jj <Esc>
 
 "make esc do nothing
 "inoremap <Esc> <Nop>
+
+" Search for a local vimrc file named .vimrc-local
+" and run what it contains before starting
+if filereadable(".vimrc-local")
+   :source .vimrc-local 
+endif
