@@ -15,6 +15,8 @@ export ZSH="/home/mudassir/.oh-my-zsh"
 # Set name of the theme to load
 ZSH_THEME="spaceship"
 POWERLEVEL9K_MODE='nerdfont-complete'
+SPACESHIP_VI_MODE_SHOW=false
+
 
 # Load environment variables
 source ~/.ENV
@@ -23,14 +25,14 @@ source ~/.ENV
 alias newrepo='~/.scripts/newrepo'
 
 # Add new line after prompt.
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 # Customise icons used for multi-line prompt.
 #POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 #POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
 
 # Disable right prompt.
-POWERLEVEL9K_DISABLE_RPROMPT=true
+#POWERLEVEL9K_DISABLE_RPROMPT=true
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
