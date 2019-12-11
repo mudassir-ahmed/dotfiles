@@ -59,6 +59,7 @@ plugins=(
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
+alias gc='git commit -m'
 
 # Quick configs
 alias zshconfig='vim ~/.zshrc'
@@ -77,8 +78,8 @@ alias gitlab='cd ~/Desktop/gitlab'
 alias uomws='~/.config/i3/init-workspace-uom'
 
 # SSH
-alias uomssh='ssh mmappmab@kilburn.cs.manchester.ac.uk'
-alias uomsshx='ssh -X mmappmab@kilburn.cs.manchester.ac.uk'
+alias uom='ssh mmappmab@kilburn.cs.manchester.ac.uk'
+alias uomx='ssh -X mmappmab@kilburn.cs.manchester.ac.uk'
 
 LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=36:*.rpm=90'
 export LS_COLORS
