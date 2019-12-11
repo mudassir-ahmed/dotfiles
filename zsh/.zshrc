@@ -44,7 +44,6 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   copybuffer
-  git
   extract
   colored-man-pages
   history
@@ -59,6 +58,7 @@ plugins=(
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
+alias gp='git push'
 alias gc='git commit -m'
 
 # Quick configs
