@@ -24,16 +24,6 @@ source ~/.ENV
 # Load github repo creation script
 alias newrepo='~/.scripts/newrepo'
 
-# Add new line after prompt.
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-
-# Customise icons used for multi-line prompt.
-#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
-
-# Disable right prompt.
-#POWERLEVEL9K_DISABLE_RPROMPT=true
-
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -91,7 +81,7 @@ alias idea='/home/mudassir/programs/idea-IC-191.7141.44/bin/idea.sh'
 export PATH="$HOME/.npm-global/bin:$node:$HOME/opt/flutter/bin:$HOME/opt/android-studio/bin:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:$PATH"
 
 
-
+# Source zsh
 source $ZSH/oh-my-zsh.sh
 
 # Default editors
@@ -127,17 +117,6 @@ set -o vi
 # When you press v, launch current line in full screen editor.
 # See edit-command-line in zshcontrib.
 bindkey -M vicmd v edit-command-line
-
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
 
 
 # >>> conda initialize >>>
