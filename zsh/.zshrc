@@ -9,6 +9,9 @@ precmd() {
     pwd > /tmp/whereami
 }
 
+# Go to the directory - will always have a value since precmd() ran first
+cd $(cat /tmp/whereami)
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mudassir/.oh-my-zsh"
 
@@ -77,8 +80,10 @@ export LS_COLORS
 # quick fix by using alias instead of PATH
 alias idea='/home/mudassir/programs/idea-IC-191.7141.44/bin/idea.sh'
 
+alias dropboxd='~/.dropbox-dist/dropboxd'
+
 # My path customisations
-export PATH="$HOME/.npm-global/bin:$node:$HOME/opt/flutter/bin:$HOME/opt/android-studio/bin:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:$PATH"
+export PATH="$HOME/.npm-global/bin:$node:$HOME/opt/flutter/bin:$HOME/opt/android-studio/bin:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:/usr/bin/local:$PATH"
 
 
 # Source zsh
