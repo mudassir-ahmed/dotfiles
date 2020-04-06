@@ -1,56 +1,68 @@
 {
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.iconTheme": "material-icon-theme",
-  "java.configuration.checkProjectSettingsExclusions": false,
-  "workbench.startupEditor": "newUntitledFile",
-  "editor.wordWrap": "on",
-  "window.zoomLevel": 0,
-  "prettier.singleQuote": true,
-  "prettier.jsxSingleQuote": true,
-  "prettier.proseWrap": "never",
-  "eslint.validate": [
-    {
-      "language": "vue",
-      "autoFix": true
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    {
-      "language": "html",
-      "autoFix": true
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        100
+    ],
+    "editor.lineNumbers": "relative",
+    "editor.suggestSelection": "first",
+    "editor.wordWrap": "on",
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        {
+            "autoFix": true,
+            "language": "vue"
+        },
+        {
+            "autoFix": true,
+            "language": "html"
+        },
+        {
+            "autoFix": true,
+            "language": "javascript"
+        }
+    ],
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "python.pythonPath": "/home/mudassir/anaconda3",
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": true,
+    "vim.easymotionMarkerBackgroundColor": "black",
+    "vim.easymotionMarkerFontFamily": "monospace",
+    "vim.easymotionMarkerFontSize": "16",
+    "vim.easymotionMarkerFontWeight": "bold",
+    "vim.easymotionMarkerForegroundColorOneChar": "#ff00a5",
+    "vim.easymotionMarkerHeight": 14,
+    "vim.easymotionMarkerYOffset": 3,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
     },
-    {
-      "language": "javascript",
-      "autoFix": true
-    }
-  ],
-  "eslint.autoFixOnSave": true,
-  "editor.formatOnSave": true,
-  "editor.rulers": [80, 100],
-  "vim.easymotion": true,
-  "vim.easymotionMarkerFontFamily": "monospace",
-  "vim.easymotionMarkerFontWeight": "bold",
-  "vim.easymotionMarkerBackgroundColor": "black",
-  "vim.easymotionMarkerForegroundColorOneChar": "#ff00a5",
-  "vim.easymotionMarkerFontSize": "16",
-  "vim.easymotionMarkerHeight": 14,
-  "vim.easymotionMarkerYOffset": 3,
-  "vim.report": 1,
-  "vim.sneak": true,
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false
-  },
-  "vim.camelCaseMotion.enable": true,
-  "workbench.colorTheme": "Github"
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "after": [
+                "<Esc>"
+            ],
+            "before": [
+                "j",
+                "j"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.report": 1,
+    "vim.sneak": true,
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": -1,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "todo-tree.tree.showScanModeButton": false,
+    "workbench.colorTheme": "GitHub Sharp",
+    "latex-workshop.view.pdf.viewer": "tab"
 }
