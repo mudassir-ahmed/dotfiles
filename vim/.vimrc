@@ -25,6 +25,9 @@ Plug 'scrooloose/nerdtree'
 " Fuzzy finder for vim - search for files.
 " Plug 'junegunn/fzf'
 
+" GitHub color scheme
+Plug 'endel/vim-github-colorscheme' 
+
 " Atom one dark theme for vim.
 Plug 'joshdick/onedark.vim'
 
