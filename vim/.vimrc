@@ -49,6 +49,12 @@ Plug 'tpope/vim-surround'
 " Plugin to add powerful commetary support
 Plug 'tpope/vim-commentary'
 
+" Automatically close strings and brackets and braces etc.
+Plug 'jiangmiao/auto-pairs'
+
+" Automatically adds 'ends' after ifs etc. e.g. case esac in bash 
+Plug 'tpope/vim-endwise'
+
 " Initialize plugin system.
 call plug#end()
 
