@@ -55,6 +55,9 @@ Plug 'jiangmiao/auto-pairs'
 " Automatically adds 'ends' after ifs etc. e.g. case esac in bash 
 Plug 'tpope/vim-endwise'
 
+" Plugin to add vim easymotion
+Plug 'easymotion/vim-easymotion'
+
 " Initialize plugin system.
 call plug#end()
 
