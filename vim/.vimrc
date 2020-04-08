@@ -15,7 +15,7 @@ Plug 'sheerun/vim-polyglot'
 
 " Plugin to show git diff in gutter.
 Plug 'airblade/vim-gitgutter'
-
+ 
 " Goyo plugin - distraction free vim.
 Plug 'junegunn/goyo.vim'
 
@@ -108,6 +108,15 @@ set showcmd
 
 "make jj do esc
 inoremap jj <Esc>
+
+" Stop using backspace in insert mode
+inoremap <BS> <Nop>
+
+" Stop using arrow keys in insert mode
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
 
 "make esc do nothing
 "inoremap <Esc> <Nop>
