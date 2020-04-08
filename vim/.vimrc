@@ -95,6 +95,13 @@ set expandtab
 " Tabs equal to 4 white space characters when using '>'.
 set shiftwidth=4
 
+" Search subfolders
+set path+=**
+
+" Show all matching files when tab autocomplete
+" instead of first match
+set wildmenu
+
 " Show (partial) command in the last line of the screen.
 " And shows useful info in visual mode.
 set showcmd
@@ -110,3 +117,5 @@ inoremap jj <Esc>
 if filereadable(".vimrc-local")
    :source .vimrc-local 
 endif
+
+
