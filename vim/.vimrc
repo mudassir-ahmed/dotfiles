@@ -139,4 +139,12 @@ if filereadable(".vimrc-local")
    :source .vimrc-local 
 endif
 
+" {{{ Neovim Specific
 
+" See real-time changes when using search and replace
+" :%s/search/replace
+if has('nvim')
+    set inccommand=nosplit
+endif
+
+" }}}
