@@ -58,6 +58,10 @@ Plug 'tpope/vim-endwise'
 " Plugin to add vim easymotion
 Plug 'easymotion/vim-easymotion'
 
+" Check syntax in Vim asynchronously and fix files,
+" with Language Server Protocol (LSP) support
+Plug 'dense-analysis/ale'
+
 " Initialize plugin system.
 call plug#end()
 
