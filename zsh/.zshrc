@@ -76,6 +76,9 @@ alias c='clear'
 # Dotfiles
 alias dotfiles="cd ~/dotfiles"
 
+# Downloads
+alias downloads="cd ~/Downloads"
+
 # Edit quicker
 alias v="$EDITOR"
 
