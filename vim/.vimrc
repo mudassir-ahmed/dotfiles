@@ -71,7 +71,11 @@ let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
 \   'vue': ['prettier', 'eslint'],
 \   'css': ['prettier'],
+\   'json': ['fixjson']
 \}
+" to set up json lint use `npm install -g jsonlint` - ALE will do the rest
+" to set up a fixer for json use `npm install -g fixjson`
+" see :h ale-json-options for more details
 " Use :h ale-supported-list to find language support
 
 " Enable prettier for all supported formats
