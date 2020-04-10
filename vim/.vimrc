@@ -52,6 +52,9 @@ Plug 'tpope/vim-surround'
 " Plugin to add powerful commetary support
 Plug 'tpope/vim-commentary'
 
+" Plugin to have git integrated in vim
+Plug 'tpope/vim-fugitive'
+
 " Automatically close strings and brackets and braces etc.
 Plug 'jiangmiao/auto-pairs'
 
