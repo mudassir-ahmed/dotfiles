@@ -10,7 +10,10 @@ precmd() {
 }
 
 # Go to the directory - will always have a value since precmd() ran first
-cd $(cat /tmp/whereami)
+LAST_LOCATION="/tmp/whereami"
+if [ -f "$LAST_LOCATION" ]; then
+    cd $(cat $LAST_LOCATION)
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mudassir/.oh-my-zsh"
@@ -27,6 +30,8 @@ source ~/.ENV
 # Load github repo creation script
 alias newrepo='~/.scripts/newrepo'
 
+alias bins='cd /usr/bin/local'
+
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -34,6 +39,8 @@ alias newrepo='~/.scripts/newrepo'
 plugins=(
   docker
   docker-compose
+  kubectl
+  minikube
   zsh-autosuggestions
   zsh-syntax-highlighting
   copybuffer
@@ -43,9 +50,30 @@ plugins=(
   npm
 )
 
+# Default editors
+export EDITOR=$(which vim)
+export VISUAL=$(which vim)
+
+# But we prefer neovim if installed
+which nvim > /dev/null
+if [ $? -eq 0 ]; then
+    export EDITOR=$(which nvim)
+    export VISUAL=$(which nvim)
+    # Default to vim to nvim
+    alias vim="$EDITOR"
+fi
+
+
 ###
 # Aliases
 ##
+
+# Navigate quicker
+alias q='exit'
+alias c='clear'
+
+# Edit quicker
+alias v="$EDITOR"
 
 # Git
 alias gs='git status'
@@ -55,17 +83,21 @@ alias gp='git push'
 alias gc='git commit -m'
 
 # Quick configs
-alias zshconfig='vim ~/.zshrc'
-alias i3config='vim ~/.config/i3/config'
-alias vimconfig='vim ~/.vimrc'
+alias zshconfig="$EDITOR ~/.zshrc"
+alias i3config="$EDITOR ~/.config/i3/config"
+alias vimconfig="$EDITOR ~/.vimrc"
 alias codeconfig="code $HOME/.config/Code/User/settings.json"
-alias gtkconfig='vim ~/.config/gtk-3.0/gtk.css'
+alias gtkconfig="$EDITOR ~/.config/gtk-3.0/gtk.css"
 
+# Sound config
 alias soundconfig='pavucontrol'
 
 # Quick directory changes
 alias github='cd ~/Desktop/github'
 alias gitlab='cd ~/Desktop/gitlab'
+
+# Weather
+alias weather='curl wttr.in'
 
 # Run script that launches uom workspace
 alias uomws='~/.config/i3/init-workspace-uom'
@@ -83,15 +115,20 @@ alias idea='/home/mudassir/programs/idea-IC-191.7141.44/bin/idea.sh'
 alias dropboxd='~/.dropbox-dist/dropboxd'
 
 # My path customisations
-export PATH="$HOME/.npm-global/bin:$node:$HOME/opt/flutter/bin:$HOME/opt/android-studio/bin:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:/usr/bin/local:$PATH"
+export PATH="$HOME/.npm-global/bin:$node:$HOME/opt/flutter/bin:$HOME/opt/android-studio/bin:$HOME/programs/mongodb-linux-x86_64-enterprise-ubuntu1804-4.0.6/bin:$HOME/programs/vagrant_2.2.4_linux_amd64:$HOME/programs/Postman-linux-x64-7.0.6:/usr/bin/local:$PATH:$HOME/bin/clion-2019.3.4/bin:$HOME/bin/opencv:$HOME/bin/opencv_contrib:$HOME/bin/opencv-build"
+
+export PATH=$PATH:/usr/local/go/bin
+
+# homebrew
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+# Update search path environment variable for linux shared library
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
 
 # Source zsh
 source $ZSH/oh-my-zsh.sh
 
-# Default editors
-export EDITOR=$(which vim)
-export VISUAL=$(which vim)
 
 
 # User configuration
