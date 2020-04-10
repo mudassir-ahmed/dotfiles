@@ -61,6 +61,21 @@ Plug 'easymotion/vim-easymotion'
 " Check syntax in Vim asynchronously and fix files,
 " with Language Server Protocol (LSP) support
 Plug 'dense-analysis/ale'
+let g:ale_javascript_prettier_use_local_config = 1
+" To have ALE run Prettier on save
+let g:ale_fix_on_save = 1
+" ALE will try to use Prettier installed locally before looking for a global installation.
+" Enable the Prettier fixer for the languages you use:
+" Fix javascript files with prettier, and then ESLint.
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\   'vue': ['prettier', 'eslint'],
+\   'css': ['prettier'],
+\}
+" Use :h ale-supported-list to find language support
+
+" Enable prettier for all supported formats
+" Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " Initialize plugin system.
 call plug#end()
