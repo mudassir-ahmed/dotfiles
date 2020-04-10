@@ -70,7 +70,11 @@ fi
 
 # Navigate quicker
 alias q='exit'
+alias e='exit'
 alias c='clear'
+
+# Dotfiles
+alias dotfiles="cd ~/dotfiles"
 
 # Edit quicker
 alias v="$EDITOR"
