@@ -24,14 +24,34 @@ Plug 'airblade/vim-gitgutter'
 " Goyo plugin - distraction free vim.
 Plug 'junegunn/goyo.vim'
 
-" Nerdtree shows tree view of filesystem.
+" NERDTree shows tree view of filesystem.
 Plug 'scrooloose/nerdtree'
+let NERDTreeShowHidden=1
+
+" Add icons to plugins such as filetype for nerdtree and airline
+Plug 'ryanoasis/vim-devicons'
+
+" Make the icons in NERDTree have a nice color
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Always match closing markup tags
+Plug 'Valloric/MatchTagAlways'
+let g:mta_filetypes = {
+\ 'html' : 1,
+\ 'xhtml' : 1,
+\ 'xml' : 1,
+\ 'jinja' : 1,
+\ 'vue': 1,
+\}
 
 " Fuzzy finder for vim - search for files.
 " Plug 'junegunn/fzf'
 
 " GitHub color scheme
 Plug 'endel/vim-github-colorscheme' 
+
+" onehalf color scheme
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Atom one dark theme for vim.
 Plug 'joshdick/onedark.vim'
@@ -105,7 +125,7 @@ aug end
 syntax on
 let g:onedark_hide_endofbuffer=0
 let g:onedark_termcolors=256
-let g:onedark_terminal_italics=1
+let g:onedark_terminal_italics=0
 let g:airline_theme='onedark'
 colorscheme onedark
 
@@ -173,12 +193,22 @@ if filereadable(".vimrc-local")
    :source .vimrc-local 
 endif
 
-" {{{ Neovim Specific
+" Neovim Specific {{{ 
 
 " See real-time changes when using search and replace
 " :%s/search/replace
 if has('nvim')
     set inccommand=nosplit
 endif
+
+" }}}
+
+" Vim remember folds and last position of cursor automatically {{{
+
+augroup remember_folds
+    autocmd!
+    autocmd BufWinLeave * mkview
+    autocmd BufWinEnter * silent! loadview
+augroup END
 
 " }}}
