@@ -156,8 +156,13 @@ set colorcolumn=80
 " Customise indentation.
 " Defines the number of spaces that a tab character in the file counts for.
 set tabstop=4
+
+" Copy the structure of the existing lines indent when autoindenting a new line.
+set copyindent
+
 " Replace tabs by whitespace characters.
 set expandtab
+
 " Tabs equal to 4 white space characters when using '>'.
 set shiftwidth=4
 
@@ -183,6 +188,12 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+
+" Stop using arrow keys in normal mode
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
 
 "make esc do nothing
 "inoremap <Esc> <Nop>
