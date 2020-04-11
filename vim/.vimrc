@@ -183,7 +183,7 @@ set showcmd
 " Spellchecking 
 " zg to add to dictionary, zw to mark word as incorrect and
 " z= to get suggestions to fix spelling mistake
-set spell spelllang=en_GB
+set spell spelllang=en
 
 "make jj do esc
 inoremap jj <Esc>
@@ -375,3 +375,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " }}}
+
+" Stop automated comments when moving to a new line
+autocmd FileType * setlocal formatoptions-=cro
