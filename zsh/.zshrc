@@ -60,6 +60,7 @@ if [ $? -eq 0 ]; then
     export VISUAL=$(which nvim)
     # Default to vim to nvim
     alias vim="$EDITOR"
+    alias vimtutor="$EDITOR -c Tutor"
 fi
 
 
