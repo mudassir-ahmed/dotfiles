@@ -180,6 +180,11 @@ set wildmenu
 " And shows useful info in visual mode.
 set showcmd
 
+" Spellchecking 
+" zg to add to dictionary, zw to mark word as incorrect and
+" z= to get suggestions to fix spelling mistake
+set spell spelllang=en_GB
+
 "make jj do esc
 inoremap jj <Esc>
 
