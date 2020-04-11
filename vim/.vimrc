@@ -12,6 +12,11 @@ call plug#begin('~/.vim/plugged')
 
 " A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
+let g:polyglot_disabled = ['vue']
+
+" Better syntax highlighting for vue
+Plug 'posva/vim-vue'
+let g:vue_pre_processors = 'detect_on_enter'
 
 " Plugin to show git diff in gutter.
 Plug 'airblade/vim-gitgutter'
