@@ -1,4 +1,4 @@
-rofi.show-icons:            false
+rofi.show-icons:            true 
 rofi.modi:                  drun,run,window,ssh
 rofi.lines:                 7
 rofi.line-padding:          10
@@ -8,5 +8,5 @@ rofi.padding:               0
 rofi.separator-style:       none
 rofi.hide-scrollbar:        true
 rofi.line-margin:           0
-rofi.font:                  sans-serif 10
+rofi.font:                  Source Code Pro for Powerline Semibold 10
 rofi.theme: ~/.config/rofi/themes/custom-nord.rasi
