@@ -160,3 +160,7 @@ set -o vi
 # See edit-command-line in zshcontrib.
 bindkey -M vicmd v edit-command-line
 
+# Fix Hyper first line precent sign
+# https://github.com/zeit/hyper/issues/2144
+# https://superuser.com/questions/645599/why-is-a-percent-sign-appearing-before-each-prompt-on-zsh-in-windows
+unsetopt PROMPT_SP
