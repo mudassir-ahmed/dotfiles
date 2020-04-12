@@ -74,8 +74,9 @@ alias c='clear'
 # Quick directory changes
 alias  dotfiles="cd ~/dotfiles"
 alias downloads="cd ~/Downloads"
-alias    github='cd ~/Desktop/github'
-alias    gitlab='cd ~/Desktop/gitlab'
+alias    github='cd ~/git/github'
+alias    gitlab='cd ~/git/gitlab'
+alias   scripts="cd ~/bin/scripts"
 
 # Edit quicker
 alias v="$EDITOR"
