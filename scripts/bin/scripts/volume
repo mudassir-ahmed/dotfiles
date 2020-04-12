@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Script to set volume globally - applies volume to all sinks
+# First parameter is the volume e.g. 60%
+
+if [ -n "$1" ]; then
+
+    for sink in `pacmd list-sinks | grep 'index:' | cut -b12-`; do
+        pactl set-sink-volume $sink $1
+    done
+
+else
+
+    echo Volume required
+    exit 1
+
+fi
+
