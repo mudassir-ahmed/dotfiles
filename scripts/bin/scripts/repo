@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# This script finds the repos on this computer and
+# launches rofi so user can select and navigate to
+# the repo.
+
+# This script assumes directory structure is like 
+# ~/git/some_category/repo_name
+
+# To use the script run (or alias):
+# $ . repo
+# This sources the script allowing changes to affect 
+# the current shell. Also assumes this script is
+# called repo and is in the user's PATH.
+
+REPO=$(cd ~/git && ls -d1 */* | rofi -dmenu -i -matching regex -threads 0 -p "Open repo: ")
+
+cd ~/git/$REPO
