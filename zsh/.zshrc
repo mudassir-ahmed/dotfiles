@@ -107,9 +107,6 @@ alias uomws='~/.config/i3/init-workspace-uom'
 alias uom='ssh mmappmab@kilburn.cs.manchester.ac.uk'
 alias uomx='ssh -X mmappmab@kilburn.cs.manchester.ac.uk'
 
-# Load github repo creation script
-alias newrepo='~/.scripts/newrepo'
-
 # }}}
 
 
@@ -122,7 +119,8 @@ export PATH="$PATH: \
     :$HOME/bin/clion-2019.3.4/bin \
     :$HOME/bin/opencv \
     :$HOME/bin/opencv_contrib \
-    :$HOME/bin/opencv-build"
+    :$HOME/bin/opencv-build \
+    :$HOME/bin/scripts"
 
 # Homebrew 
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
