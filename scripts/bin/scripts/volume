@@ -11,7 +11,7 @@ if [ -n "$1" ]; then
 
 else
 
-    echo Volume required
+    echo Please provide a volume to set. E.g. 10%/0.1/.1
     exit 1
 
 fi
