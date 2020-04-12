@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This script opens rofi to change the audio profile/controller
+
+# TODO: the 0 represents the card - will it always be this?
+# TODO: the option list for profiles should be automated not hardcoded
+
+# Run pacmd list-cards to see available cards and their profiles
+
+CARD=0
+
+PROFILES="output:hdmi-stereo\noutput:hdmi-stereo-extra1"
+
+SELECTED_PROFILE=$(echo -e "$PROFILES" | rofi -dmenu -p "Choose audio controller/profile")
+
+pacmd set-card-profile $CARD "$SELECTED_PROFILE"
