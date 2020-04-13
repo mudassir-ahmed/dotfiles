@@ -203,7 +203,7 @@ bar {
     i3bar_command i3bar --transparency
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
     separator_symbol "   "
-    tray_padding 40
+    tray_padding 4
     tray_output primary
     # font pango:DejaVu Sans Mono 10
     # workspace_buttons no

@@ -167,3 +167,10 @@ bindkey -M vicmd v edit-command-line
 # https://github.com/zeit/hyper/issues/2144
 # https://superuser.com/questions/645599/why-is-a-percent-sign-appearing-before-each-prompt-on-zsh-in-windows
 unsetopt PROMPT_SP
+
+# Set primary display with xrandr
+# This is used by i3 for the tray option
+# @docs https://i3wm.org/docs/userguide.html#_tray_output
+# WARNING: this could break since display name is hard coded
+# You may neeed to change this if installing dotfiles on another device
+xrandr --output HDMI-0 --primary
