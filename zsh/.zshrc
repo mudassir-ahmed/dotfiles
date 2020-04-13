@@ -7,15 +7,15 @@
 # Use of hook function.
 # This function is executed before each prompt.
 # We take advantage of this by saving the working directory of the last used terminal i.e. terminal that created the most recented prompt.
-precmd() {
-    pwd > /tmp/whereami
-}
+# precmd() {
+#     pwd > /tmp/whereami
+# }
 
 # Go to the directory - will always have a value since precmd() ran first
-LAST_LOCATION="/tmp/whereami"
-if [ -f "$LAST_LOCATION" ]; then
-    cd $(cat $LAST_LOCATION)
-fi
+# LAST_LOCATION="/tmp/whereami"
+# if [ -f "$LAST_LOCATION" ]; then
+#     cd $(cat $LAST_LOCATION)
+# fi
 
 # }}}
 
