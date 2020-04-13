@@ -4,14 +4,12 @@ Since many people at University have asked me for them, I have decided to put my
 
 Below shows some of the things that these dotfiles customise. ![alt text](preview.png 'Setup Preview')
 
-In the image you can see:
-
 - i3 window manager (with i3blocks)
-- Vim (the screen on the right shows distraction free mode)
+- Neovim
 - ZSH
 - oh-my-zsh
-- Bash
-- A termnial with the output of neofetch
+- custom scripts
+- rofi
 
 You will find a fair amount of alias and customisation in the read command files which may need altering to suit your preference.
 
