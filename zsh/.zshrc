@@ -127,7 +127,7 @@ export PATH="$PATH: \
     :$HOME/bin/scripts"
 
 # Homebrew 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 # Update search path environment variable for linux shared library
 # Fix for opencv library missing issue when compiling
