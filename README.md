@@ -2,7 +2,11 @@
 
 Since many people at University have asked me for them, I have decided to put my dotfiles on github.
 
-Below shows some of the things that these dotfiles customise. ![alt text](preview.png 'Setup Preview')
+Below shows some of the things that these dotfiles customise. 
+
+![alt text](preview-1.png 'Setup Preview')
+![alt text](preview-2.png 'Setup Preview')
+![alt text](preview-3.png 'Setup Preview')
 
 - i3 window manager (with i3blocks)
 - Neovim
