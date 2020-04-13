@@ -18,6 +18,17 @@ terminal-window vte-terminal {
     border-color: transparent;
 }
 
+/* Quick fix for black border radius fill 
+   If that doesn't fix it, I think its something to do with window
+   being filled with black as default from the window manager.
+   Possible fix in next gnome update
+   @see https://gitlab.gnome.org/GNOME/gtk/-/commit/2ce63a86ba689aa41eb47409c889c469497478b0
+   @see https://gitlab.gnome.org/GNOME/gtk/issues/550
+*/
+* {
+    border-radius: 0;
+}
+
 scrollbar
 {
     -GtkScrollbar-has-backward-stepper: false;
