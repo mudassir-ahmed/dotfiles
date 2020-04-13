@@ -6,6 +6,18 @@
  *            https://lazka.github.io/pgi-docs/Gtk-3.0/classes/Scrollbar.html
  */
 
+terminal-window,
+terminal-window box,
+terminal-window notebook,
+terminal-window stack,
+terminal-window terminal-screen-container,
+terminal-window box,
+terminal-window vte-terminal {
+    border-image-width: 0;
+    border: none;
+    border-color: transparent;
+}
+
 scrollbar
 {
     -GtkScrollbar-has-backward-stepper: false;
