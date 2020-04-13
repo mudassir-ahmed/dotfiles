@@ -67,6 +67,11 @@ alias q='exit'
 alias e='exit'
 alias c='clear'
 
+# Find commands quicker
+# Notice the space - this won't add the history command to your history
+# Otherwise could lead to inception :)
+alias hg=' history | grep'
+
 # Quick directory changes
 alias  dotfiles="cd ~/dotfiles"
 alias downloads="cd ~/Downloads"
