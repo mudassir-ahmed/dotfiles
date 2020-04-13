@@ -179,36 +179,45 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #27ae60
-set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
-set $indicator           #d80073
-set $bar-bg-color        #1e272e
+set $inactive-text-color #8080807d
+set $urgent-bg-color     #1d1d1d73
+set $indicator           #ffffff
+set $bar-bg-color        #1d1d1d73 
+set $bg-color 	         #1d1d1d73 
+set $inactive-bg-color   #1d1d1d73 
 
 # window colors
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          $indicator
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
+client.placeholder      $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator
+
+client.background       #ffffff
 
 # hide_edge_borders both
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+    i3bar_command i3bar --transparency
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
     separator_symbol "   "
-    tray_padding 30 px
+    tray_padding 40
+    tray_output primary
+    # font pango:DejaVu Sans Mono 10
+    # workspace_buttons no
+	height 25
+	# strip_workspace_numbers yes
 	colors {
 		background $bar-bg-color
-        separator #757575
+        separator #ffffff
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
+		focused_workspace  $bg-color          $inactive-bg-color $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+		urgent_workspace   $urgent-bg-color   $inactive-bg-color  $text-color
 	}
 }
 
@@ -246,9 +255,9 @@ bindsym       $mod+Print exec gnome-screenshot
 bindsym $mod+g exec google-chrome
 
 # i3-gaps configuration
-gaps inner 8
+gaps inner 12
 gaps outer 0
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 
 # Assign workspaces to different monitors
 workspace $ws1 output DVI-D-0
