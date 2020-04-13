@@ -38,14 +38,10 @@ source ~/.ENV
 plugins=(
   docker
   docker-compose
-  kubectl
-  minikube
   zsh-autosuggestions
   zsh-syntax-highlighting
-  copybuffer
   extract
   colored-man-pages
-  history
   npm
 )
 
