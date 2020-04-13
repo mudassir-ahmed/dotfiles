@@ -57,7 +57,8 @@ Plug 'endel/vim-github-colorscheme'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Atom one dark theme for vim.
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
+" Now in dotfiles
 
 " Preview colours in source code for support languages while editing.
 Plug 'ap/vim-css-color'
