@@ -89,13 +89,14 @@ alias gp='git push'
 alias gc='git commit -m'
 
 # Quick configs
-alias  zshconfig="$EDITOR ~/.zshrc"
-alias   i3config="$EDITOR ~/.config/i3/config"
-alias  vimconfig="$EDITOR ~/.vimrc"
-alias codeconfig="$EDITOR ~/.config/Code/User/settings.json"
-alias  gtkconfig="$EDITOR ~/.config/gtk-3.0/gtk.css"
-alias roficonfig="$EDITOR ~/.config/rofi/config"
-alias   rtconfig="$EDITOR ~/.config/rofi/themes/custom-nord.rasi"
+alias     zshconfig="$EDITOR ~/.zshrc"
+alias      i3config="$EDITOR ~/.config/i3/config"
+alias     vimconfig="$EDITOR ~/.vimrc"
+alias    codeconfig="$EDITOR ~/.config/Code/User/settings.json"
+alias     gtkconfig="$EDITOR ~/.config/gtk-3.0/gtk.css"
+alias    roficonfig="$EDITOR ~/.config/rofi/config"
+alias      rtconfig="$EDITOR ~/.config/rofi/themes/custom-nord.rasi"
+alias comptonconfig="$EDITOR ~/.config/compton.conf"
 
 # Sound config
 alias soundconfig='pavucontrol'
