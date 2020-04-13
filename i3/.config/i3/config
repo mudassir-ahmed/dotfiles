@@ -195,9 +195,7 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.placeholder      $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator
 
-client.background       #ffffff
-
-# hide_edge_borders both
+hide_edge_borders both
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -222,8 +220,8 @@ bar {
 }
 
 # Set border style
-default_border normal 2
-for_window [class=.*] border normal 2
+default_border none
+for_window [class=.*] border none
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -257,7 +255,7 @@ bindsym $mod+g exec google-chrome
 # i3-gaps configuration
 gaps inner 12
 gaps outer 0
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border none
 
 # Assign workspaces to different monitors
 workspace $ws1 output DVI-D-0
