@@ -10,7 +10,8 @@ scrollbar
 {
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    background-color: #21252d;
+    /* background-color: #21252d; */
+    background-color: inherit;
 }
 
 scrollbar button
@@ -21,24 +22,29 @@ scrollbar button
 scrollbar,
 scrollbar slider
 {
-    min-width: 10px;
+    min-width: 6px;
     min-height: 10px;
-    border-radius: 0;
     border: none;
-    transition: 0.3s;
+    transition: 0.2s ease;
+    border-radius: 3px;
+}
+
+scrollbar:hover slider:active {
+    min-width: 10px;
+    border-radius: 5px;
 }
 
 scrollbar slider
 {
-    background-color: #495263;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 scrollbar slider:hover
 {
-    background-color: #353b48;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 scrollbar slider:active
 {
-    background-color: #303640;
+    background-color: rgba(0, 0, 0, 0.55);
 }
