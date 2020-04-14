@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# This script allows the user to select a winow 
+# you wish to set to urgent.
+# Useful if debugging i3wm.
+
+wmctrl -r :SELECT: -b add,demands_attention

@@ -209,13 +209,17 @@ bar {
     # workspace_buttons no
 	height 25
 	# strip_workspace_numbers yes
+	# ws_min_width 60
 	colors {
 		background $bar-bg-color
         separator #ffffff
+
 		#                  border             background         text
 		focused_workspace  $bg-color          $inactive-bg-color $text-color
+		active_workspace   $inactive-bg-color $inactive-bg-color $inactive-text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $inactive-bg-color  $text-color
+		urgent_workspace   $urgent-bg-color   $inactive-bg-color $text-color
+		binding_mode       $inactive-bg-color $inactive-bg-color $inactive-text-color
 	}
 }
 
