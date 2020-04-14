@@ -181,7 +181,8 @@ bindsym $mod+r mode "resize"
 
 set $text-color          #f3f4f5
 set $inactive-text-color #8080807d
-set $urgent-bg-color     #1d1d1d73
+set $urgent-bg-color     #eb2f06 
+set $urgent-text-color   #eb2f06
 set $indicator           #ffffff
 set $bar-bg-color        #1d1d1d73 
 set $bg-color 	         #1d1d1d73 
@@ -193,7 +194,7 @@ client.focused          $bg-color           $bg-color          $text-color      
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
 client.placeholder      $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator
+client.urgent           $urgent-bg-color    $urgent-bg-color   $urgent-text-color   $indicator
 
 hide_edge_borders both
 
@@ -212,13 +213,14 @@ bar {
 	# ws_min_width 60
 	colors {
 		background $bar-bg-color
+		statusline #ffffff
         separator #ffffff
 
 		#                  border             background         text
 		focused_workspace  $bg-color          $inactive-bg-color $text-color
 		active_workspace   $inactive-bg-color $inactive-bg-color $inactive-text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $inactive-bg-color $text-color
+		urgent_workspace   $inactive-bg-color $inactive-bg-color $urgent-text-color 
 		binding_mode       $inactive-bg-color $inactive-bg-color $inactive-text-color
 	}
 }
