@@ -62,10 +62,10 @@ fi
 
 # Aliases {{{
 
-# Navigate quicker
-alias q='exit'
-alias e='exit'
-alias c='clear'
+# Navigate quicker without saving to history
+alias q=' exit'
+alias e=' exit'
+alias c=' clear'
 
 # Find commands quicker
 # Notice the space - this won't add the history command to your history
