@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# This script allows the user to select a window 
+# you wish to set to urgent.
+# Useful if debugging i3wm.
+# You will need to source the script in order for it to work.
+
+wmctrl -r :SELECT: -b add,demands_attention
