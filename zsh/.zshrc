@@ -166,7 +166,7 @@ bindkey -M vicmd v edit-command-line
 # Fix Hyper first line precent sign
 # https://github.com/zeit/hyper/issues/2144
 # https://superuser.com/questions/645599/why-is-a-percent-sign-appearing-before-each-prompt-on-zsh-in-windows
-unsetopt PROMPT_SP
+# unsetopt PROMPT_SP
 
 # Set primary display with xrandr
 # This is used by i3 for the tray option
