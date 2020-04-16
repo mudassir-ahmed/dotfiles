@@ -147,6 +147,11 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " let g:user_emmet_install_global = 0
 " autocmd FileType html,css EmmetInstall
 
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+filetype indent plugin on
+
 " Always wrap long lines.
 set wrap
 
