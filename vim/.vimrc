@@ -181,6 +181,10 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" To ALWAYS use the clipboard for ALL operations (instead of interacting with         
+" the '+' and/or '*' registers explicitly)
+set clipboard=unnamedplus
+
 " Show all matching files when tab autocomplete
 " instead of first match
 set wildmenu
