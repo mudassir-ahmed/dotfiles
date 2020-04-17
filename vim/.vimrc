@@ -93,29 +93,6 @@ Plug 'jiangmiao/auto-pairs'
 " Plugin to add vim easymotion
 Plug 'easymotion/vim-easymotion'
 
-" Check syntax in Vim asynchronously and fix files,
-" with Language Server Protocol (LSP) support
-Plug 'dense-analysis/ale'
-let g:ale_javascript_prettier_use_local_config = 1
-" To have ALE run Prettier on save
-let g:ale_fix_on_save = 1
-" ALE will try to use Prettier installed locally before looking for a global installation.
-" Enable the Prettier fixer for the languages you use:
-" Fix javascript files with prettier, and then ESLint.
-let g:ale_fixers = {
-\   'javascript': ['prettier', 'eslint'],
-\   'vue': ['prettier', 'eslint'],
-\   'css': ['prettier'],
-\   'json': ['fixjson']
-\}
-" to set up json lint use `npm install -g jsonlint` - ALE will do the rest
-" to set up a fixer for json use `npm install -g fixjson`
-" see :h ale-json-options for more details
-" Use :h ale-supported-list to find language support
-
-" Enable prettier for all supported formats
-" Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-
 " Initialize plugin system.
 call plug#end()
 
@@ -392,7 +369,10 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-" }}}
-
 " Stop automated comments when moving to a new line
 autocmd FileType * setlocal formatoptions-=cro
+
+" You can use :Prettier to format current buffer
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" }}}
