@@ -116,16 +116,16 @@ alias uomx='ssh -X mmappmab@kilburn.cs.manchester.ac.uk'
 
 
 # My path customisations
-export PATH="$PATH: \
-    :/usr/bin/local \
-    :$HOME/.npm-global/bin \
-    :$HOME/opt/flutter/bin \
-    :$HOME/opt/android-studio/bin \
-    :$HOME/bin/clion-2019.3.4/bin \
-    :$HOME/bin/opencv \
-    :$HOME/bin/opencv_contrib \
-    :$HOME/bin/opencv-build \
-    :$HOME/bin/scripts"
+PATH=$PATH:/usr/bin/local
+PATH=$PATH:$HOME/.npm-global/bin
+PATH=$PATH:$HOME/opt/flutter/bin
+PATH=$PATH:$HOME/opt/android-studio/bin
+PATH=$PATH:$HOME/bin/clion-2019.3.4/bin
+PATH=$PATH:$HOME/bin/opencv
+PATH=$PATH:$HOME/bin/opencv_contrib
+PATH=$PATH:$HOME/bin/opencv-build
+PATH=$PATH:$HOME/bin/script
+export PATH
 
 # Homebrew 
 # eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
