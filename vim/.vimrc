@@ -93,6 +93,9 @@ Plug 'jiangmiao/auto-pairs'
 " Plugin to add vim easymotion
 Plug 'easymotion/vim-easymotion'
 
+" Plugin to show tag list - :Tlist
+Plug 'vim-scripts/taglist.vim'
+
 " Initialize plugin system.
 call plug#end()
 
