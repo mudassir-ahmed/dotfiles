@@ -124,7 +124,7 @@ PATH=$PATH:$HOME/bin/clion-2019.3.4/bin
 PATH=$PATH:$HOME/bin/opencv
 PATH=$PATH:$HOME/bin/opencv_contrib
 PATH=$PATH:$HOME/bin/opencv-build
-PATH=$PATH:$HOME/bin/script
+PATH=$PATH:$HOME/bin/scripts
 export PATH
 
 # Homebrew 
