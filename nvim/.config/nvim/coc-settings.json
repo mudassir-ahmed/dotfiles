@@ -7,5 +7,6 @@
     "json",
     "vue"
   ],
-  "clangd.path": "/usr/bin/clangd-10"
+  "clangd.path": "/usr/bin/clangd-10",
+  "clangd.arguments": ["--header-insertion=/usr/local/include/"]
 }
