@@ -5,6 +5,7 @@
     "javascript",
     "typescript",
     "json",
-		"vue"
-  ]
+    "vue"
+  ],
+  "clangd.path": "/usr/bin/clangd-10"
 }
