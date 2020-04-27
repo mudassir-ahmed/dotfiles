@@ -31,9 +31,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'scrooloose/nerdtree'
 let NERDTreeShowHidden=1
 
-" Add icons to plugins such as filetype for nerdtree and airline
-Plug 'ryanoasis/vim-devicons'
-
 " Make the icons in NERDTree have a nice color
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
@@ -74,6 +71,9 @@ Plug 'osyo-manga/vim-anzu'
 
 " Plugin to use themes for vim-airline.
 Plug 'vim-airline/vim-airline-themes'
+
+" Add icons to plugins such as filetype for nerdtree and airline
+Plug 'ryanoasis/vim-devicons'
 
 " Plugin to manipulate surrounding vim objects 
 Plug 'tpope/vim-surround'
