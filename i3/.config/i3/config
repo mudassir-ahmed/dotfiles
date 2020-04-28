@@ -259,6 +259,15 @@ bindsym       Print exec gnome-screenshot
 # Shortcut to open Google Chrome.
 bindsym $mod+g exec google-chrome
 
+# Scratchpad terminal
+set $scratch_term_wrole "scratchpad_terminal"
+bindsym $mod+Shift+F12 move scratchpad
+bindsym $mod+Shift+Return scratchpad show;[window_role=$scratch_term_wrole] move position center
+# Get the scratchpad terminal ready
+exec --no-startup-id gnome-terminal --role=$scratch_term_wrole
+for_window [window_role=$scratch_term_wrole] move scratchpad
+for_window [window_role=$scratch_term_wrole] resize set 800 450
+
 # i3-gaps configuration
 gaps inner 12
 gaps outer 0
