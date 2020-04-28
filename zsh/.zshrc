@@ -83,11 +83,18 @@ alias   scripts="cd ~/bin/scripts"
 alias v="$EDITOR"
 
 # Git
-alias gs='git status'
-alias gd='git diff'
-alias ga='git add'
-alias gp='git push'
-alias gc='git commit -m'
+alias  ga='git add'
+alias gap='git add --patch'
+alias  gb='git branch'
+alias  gc='git commit --verbose'
+alias gc!='git commit --verbose --amend'
+alias gcf='git config --list'
+alias gco='git checkout'
+alias  gd='git diff'
+alias  gl='git log'
+alias  gm='git merge'
+alias  gp='git push'
+alias  gs='git status'
 
 # Quick configs
 alias     zshconfig="$EDITOR ~/.zshrc"
