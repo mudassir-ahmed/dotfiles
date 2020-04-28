@@ -178,6 +178,10 @@ set wildmenu
 " And shows useful info in visual mode.
 set showcmd
 
+" Modelines
+set modeline
+set modelines=5
+
 " Spellchecking 
 " zg to add to dictionary, zw to mark word as incorrect and
 " z= to get suggestions to fix spelling mistake
