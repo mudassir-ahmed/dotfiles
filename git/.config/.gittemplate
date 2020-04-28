@@ -1,0 +1,22 @@
+# vim: ft=gitcommit:cursorline
+# Capitalise the summary line. Do not end it with a period.
+# Use imperative mood, so: If applied, this commit will...
+###### 50 chars ##################################
+
+
+# Why was this change made?
+# More detailed explanatory text, if necessary. Explain the problem that
+# this commit is solving. Focus on why you are making this change as
+# opposed to how (the code explains that). Are there side effects or
+# other unintuitive consequences of this change? Here's the place to
+# explain them.
+##### 72 chars #########################################################
+
+
+# For further reading see:
+# - http://xkcd.com/1296/
+
+
+# Any references to issues/articles/etc?
+# Resolves: #123
+# See also: #456, #789
