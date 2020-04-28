@@ -252,8 +252,8 @@ exec_always --no-startup-id feh --bg-scale ~/.config/i3/background.jpg
 #assign [class="^Google-chrome$"] $ws2
 
 # Screenshots.
-bindsym $mod+Shift+Print exec gnome-screenshot -a 
-bindsym       $mod+Print exec gnome-screenshot 
+bindsym Shift+Print exec gnome-screenshot -a 
+bindsym       Print exec gnome-screenshot 
 
 # Shortcut to open Google Chrome.
 bindsym $mod+g exec google-chrome
