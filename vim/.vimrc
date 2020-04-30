@@ -208,6 +208,14 @@ nnoremap <Right> <Nop>
 "make esc do nothing
 "inoremap <Esc> <Nop>
 
+" Quick way to move lines of text up or down (re-indents)
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
 " Search for a local vimrc file named .vimrc-local
 " and run what it contains before starting
 if filereadable(".vimrc-local")
