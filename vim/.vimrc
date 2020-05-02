@@ -182,6 +182,10 @@ set showcmd
 set modeline
 set modelines=5
 
+" Open new split panes to right and bottom
+set splitbelow
+set splitright
+
 " Spellchecking 
 " zg to add to dictionary, zw to mark word as incorrect and
 " z= to get suggestions to fix spelling mistake
@@ -215,6 +219,12 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Move around splits faster
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
 
 " Search for a local vimrc file named .vimrc-local
 " and run what it contains before starting
