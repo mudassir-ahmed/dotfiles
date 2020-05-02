@@ -263,7 +263,6 @@ fun! LoadFileState()
         return
     endif
     silent! loadview
-    :echo "Silent view called"
 endfun
 
 augroup remember_folds
