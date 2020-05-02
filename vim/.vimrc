@@ -230,7 +230,7 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
-nnoremap <C-h>
+nnoremap <C-h> <C-w><C-h>
 
 " Allow saving of files as sudo when you forgot to start vim using sudo
 cmap w!! w !sudo tee > /dev/null % <C-w><C-h>
@@ -251,12 +251,21 @@ endif
 
 " }}}
 
-" Vim remember folds and last position of cursor automatically {{{
+" Vim remember folds and view info like cursor position {{{
+
+fun! LoadFileState()
+    " Don't loadview on these file types
+    if &ft =~ 'gitcommit\|git\|gittemplate\|COMMIT_EDITMSG'
+        return
+    endif
+    silent! loadview
+    :echo "Silent view called"
+endfun
 
 augroup remember_folds
     autocmd!
     autocmd BufWinLeave * mkview
-    autocmd BufWinEnter * silent! loadview
+    autocmd BufWinEnter * call LoadFileState()
 augroup END
 
 " }}}
