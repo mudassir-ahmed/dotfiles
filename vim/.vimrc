@@ -172,9 +172,9 @@ set smartcase
 " which is the default
 map Y y$
  
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
+" Map (redraw screen) to also turn off search highlighting until the
 " next search
-nnoremap <C-L> :nohl<CR><C-L>
+nnoremap <leader>r :nohl<CR>:redraw!<CR>
 
 " To ALWAYS use the clipboard for ALL operations (instead of interacting with         
 " the '+' and/or '*' registers explicitly)
