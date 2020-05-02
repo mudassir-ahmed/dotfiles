@@ -96,6 +96,12 @@ Plug 'easymotion/vim-easymotion'
 " Plugin to show tag list - :Tlist
 Plug 'vim-scripts/taglist.vim'
 
+" Rainbow parentheses
+Plug 'junegunn/rainbow_parentheses.vim'
+let g:rainbow#max_level = 16
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+" autocmd FileType * RainbowParentheses
+
 " Initialize plugin system.
 call plug#end()
 
