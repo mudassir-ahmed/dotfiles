@@ -224,7 +224,10 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
-nnoremap <C-h> <C-w><C-h>
+nnoremap <C-h>
+
+" Allow saving of files as sudo when you forgot to start vim using sudo
+cmap w!! w !sudo tee > /dev/null % <C-w><C-h>
 
 " Search for a local vimrc file named .vimrc-local
 " and run what it contains before starting
