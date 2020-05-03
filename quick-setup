@@ -15,7 +15,7 @@
 ## Install dependancies
 # TODO: neovim nightly build install
 sudo apt update
-sudo apt install git vim zsh xclip stow curl npm docker.io docker-compose exuberant-ctags neovim cargo 
+sudo apt install git vim zsh xclip stow curl npm docker.io docker-compose exuberant-ctags neovim cargo hub
 
 
 ## Install some nice programs
