@@ -43,6 +43,10 @@ plugins=(
   extract
   colored-man-pages
   npm
+  last-working-dir
+  web-search
+  vi-mode
+  magic-enter
 )
 
 # Default editors
@@ -74,6 +78,7 @@ alias hg=' history | grep'
 
 # Quick directory changes
 alias  dotfiles="cd ~/dotfiles"
+alias      dots="cd ~/dotfiles"
 alias downloads="cd ~/Downloads"
 alias    github='cd ~/git/github'
 alias    gitlab='cd ~/git/gitlab'
@@ -97,14 +102,15 @@ alias  gp='git push'
 alias  gs='git status'
 
 # Quick configs
-alias     zshconfig="$EDITOR ~/.zshrc"
-alias      i3config="$EDITOR ~/.config/i3/config"
-alias     vimconfig="$EDITOR ~/.vimrc"
-alias    codeconfig="$EDITOR ~/.config/Code/User/settings.json"
-alias     gtkconfig="$EDITOR ~/.config/gtk-3.0/gtk.css"
-alias    roficonfig="$EDITOR ~/.config/rofi/config"
-alias      rtconfig="$EDITOR ~/.config/rofi/themes/custom-nord.rasi"
-alias comptonconfig="$EDITOR ~/.config/compton.conf"
+alias       zshconfig="$EDITOR ~/.zshrc"
+alias        i3config="$EDITOR ~/.config/i3/config"
+alias       vimconfig="$EDITOR ~/.vimrc"
+alias      codeconfig="$EDITOR ~/.config/Code/User/settings.json"
+alias       gtkconfig="$EDITOR ~/.config/gtk-3.0/gtk.css"
+alias      roficonfig="$EDITOR ~/.config/rofi/config"
+alias        rtconfig="$EDITOR ~/.config/rofi/themes/custom-nord.rasi"
+alias   comptonconfig="$EDITOR ~/.config/compton.conf"
+alias alacrittyconfig="$EDITOR ~/.config/alacritty/alacritty.yml"
 
 # Sound config
 alias soundconfig='pavucontrol'
@@ -160,15 +166,6 @@ source $ZSH/oh-my-zsh.sh
 
 # SSH 
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Use a vi-style line editing interface.
-# Docs https://www.gnu.org/software/bash/manual/bashref.html#Readline-vi-Mode
-# This makes some plugins for oh-my-zsh such as magic-enter break.
-set -o vi
-
-# When you press v, launch current line in full screen editor.
-# See edit-command-line in zshcontrib.
-bindkey -M vicmd v edit-command-line
 
 # Fix Hyper first line precent sign
 # https://github.com/zeit/hyper/issues/2144
