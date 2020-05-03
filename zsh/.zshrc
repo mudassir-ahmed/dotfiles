@@ -1,3 +1,6 @@
+# Dotfiles location
+DOTFILES="~/dotfiles"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mudassir/.oh-my-zsh"
 
@@ -57,8 +60,8 @@ alias c=' clear'
 alias hg=' history | grep'
 
 # Quick directory changes
-alias  dotfiles="cd ~/dotfiles"
-alias      dots="cd ~/dotfiles"
+alias  dotfiles="cd $DOTFILES"
+alias      dots="cd $DOTFILES"
 alias downloads="cd ~/Downloads"
 alias    github='cd ~/git/github'
 alias    gitlab='cd ~/git/gitlab'
@@ -82,15 +85,15 @@ alias  gp='git push'
 alias  gs='git status'
 
 # Quick configs
-alias       zshconfig="$EDITOR ~/.zshrc"
-alias        i3config="$EDITOR ~/.config/i3/config"
-alias       vimconfig="$EDITOR ~/.vimrc"
-alias      codeconfig="$EDITOR ~/.config/Code/User/settings.json"
-alias       gtkconfig="$EDITOR ~/.config/gtk-3.0/gtk.css"
-alias      roficonfig="$EDITOR ~/.config/rofi/config"
-alias        rtconfig="$EDITOR ~/.config/rofi/themes/custom-nord.rasi"
-alias   comptonconfig="$EDITOR ~/.config/compton.conf"
-alias alacrittyconfig="$EDITOR ~/.config/alacritty/alacritty.yml"
+alias       zshconfig="$EDITOR $DOTFILES/zsh/.zshrc"
+alias        i3config="$EDITOR $DOTFILES/i3/.config/i3/config"
+alias       vimconfig="$EDITOR $DOTFILES/vim/.vimrc"
+alias      codeconfig="$EDITOR $DOTFILES/vscode/.config/Code/User/settings.json"
+alias       gtkconfig="$EDITOR $DOTFILES/gtk-theme/.config/gtk-3.0/gtk.css"
+alias      roficonfig="$EDITOR $DOTFILES/rofi/.config/rofi/config"
+alias        rtconfig="$EDITOR $DOTFILES/rofi/.config/rofi/themes/custom-nord.rasi"
+alias   comptonconfig="$EDITOR $DOTFILES/compton/.config/compton.conf"
+alias alacrittyconfig="$EDITOR $DOTFILES/alacritty/.config/alacritty/alacritty.yml"
 
 # Sound config
 alias soundconfig='pavucontrol'
