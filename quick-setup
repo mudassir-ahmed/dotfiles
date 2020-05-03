@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# Author: Mudassir Ahmed
+
+# Note:
+# Setting up ssh for git might save you time
+# You may need to log out to see certain changes
+
+# TODO: stow the minimal configs
+# TODO: add minimal option
+# TODO: set up ssh interactivly
+# TODO: env variables used for setup
+
+
+## Install dependancies
+# TODO: neovim nightly build install
+sudo apt update
+sudo apt install git vim zsh xclip stow curl npm docker.io docker-compose exuberant-ctags neovim cargo 
+
+
+## Install some nice programs
+sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock
+
+
+## Install alacritty dependancies
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
+
+
+## Install alacritty
+# TODO: add alacritty install script
+
+## Install vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
+## Set up docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+
+## Set up npm
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+
+
+## Setup
+touch ~/.ENV
+
+
+## Install oh my zsh 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+## Download zsh-autosuggestions plugin
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+
+## Download zsh-syntax-highlighting plugin
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
+## Spaceship zsh
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+
+## Set up git
+# Note: you will need to set email and name yourself
+git config --global color.ui true
+git config --global color.status auto
+git config --global core.editor nvim
+git config --global commit.template ~/.config/.gittemplate
+cd ~/dotfiles
+stow git
+
+
+## Set up ohmyzsh
+rm -f ~/.zshrc
+cd ~/dotfiles
+stow zsh
+
+
+## Set up fonts
+cd ~/dotfiles
+stow fonts
+fc-cache -f -v
+
+
+
+
