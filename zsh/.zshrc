@@ -1,24 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Sticky working directory {{{
-
-# http://zsh.sourceforge.net/Doc/zsh_a4.pdf
-# Use of hook function.
-# This function is executed before each prompt.
-# We take advantage of this by saving the working directory of the last used terminal i.e. terminal that created the most recented prompt.
-# precmd() {
-#     pwd > /tmp/whereami
-# }
-
-# Go to the directory - will always have a value since precmd() ran first
-# LAST_LOCATION="/tmp/whereami"
-# if [ -f "$LAST_LOCATION" ]; then
-#     cd $(cat $LAST_LOCATION)
-# fi
-
-# }}}
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mudassir/.oh-my-zsh"
 
@@ -29,7 +8,6 @@ SPACESHIP_VI_MODE_SHOW=false
 
 # Load environment variables
 source ~/.ENV
-
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
