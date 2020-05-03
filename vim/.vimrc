@@ -84,6 +84,12 @@ Plug 'tpope/vim-commentary'
 " Plugin to have git integrated in vim
 Plug 'tpope/vim-fugitive'
 
+" GitHub provider for vim-fugitive
+Plug 'tpope/vim-rhubarb'
+
+" GitLab provider for vim-fugitive
+Plug 'shumphrey/fugitive-gitlab.vim'
+
 " Automatically close strings and brackets and braces etc.
 Plug 'jiangmiao/auto-pairs'
 
