@@ -236,6 +236,13 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
+" Autofix some mistakes
+cab W  w 
+cab Wq wq  
+cab wQ wq
+cab WQ wq
+cab Q  q
+
 " Allow saving of files as sudo when you forgot to start vim using sudo
 cmap w!! w !sudo tee > /dev/null % <C-w><C-h>
 
