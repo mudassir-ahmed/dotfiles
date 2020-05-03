@@ -84,6 +84,9 @@ alias  gm='git merge'
 alias  gp='git push'
 alias  gs='git status'
 
+# Git tree
+alias gtree='git ls-tree -r --name-only HEAD | tree -a --fromfile'
+
 # Quick configs
 alias       zshconfig="$EDITOR $DOTFILES/zsh/.zshrc"
 alias        i3config="$EDITOR $DOTFILES/i3/.config/i3/config"
