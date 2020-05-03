@@ -90,6 +90,9 @@ Plug 'tpope/vim-rhubarb'
 " GitLab provider for vim-fugitive
 Plug 'shumphrey/fugitive-gitlab.vim'
 
+" Git commit browser
+Plug 'junegunn/gv.vim'
+
 " Automatically close strings and brackets and braces etc.
 Plug 'jiangmiao/auto-pairs'
 
