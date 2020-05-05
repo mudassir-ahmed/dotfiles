@@ -49,11 +49,6 @@ fi
 
 # Aliases {{{
 
-# Navigate quicker without saving to history
-alias q=' exit'
-alias e=' exit'
-alias c=' clear'
-
 # Find commands quicker
 # Notice the space - this won't add the history command to your history
 # Otherwise could lead to inception :)
