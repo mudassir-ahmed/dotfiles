@@ -33,6 +33,9 @@ plugins=(
 
 PATH=$PATH:/snap/bin # gets nvim working over ssh
 
+# Allows hidden files to be matched without explicity specifying the dot
+setopt globdots
+
 # Default editors
 export EDITOR=$(which vim)
 export VISUAL=$(which vim)
