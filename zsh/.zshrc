@@ -24,6 +24,7 @@ plugins=(
   extract
   colored-man-pages
   npm
+  node
   last-working-dir
   web-search
   vi-mode
