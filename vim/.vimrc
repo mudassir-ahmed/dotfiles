@@ -111,6 +111,9 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 " Initialize plugin system.
 call plug#end()
 
+" Render vim-airline icons correctly
+let g:airline_powerline_fonts = 1
+
 " i3 syntax highlighting.
 aug i3config_ft_detection
   au!
