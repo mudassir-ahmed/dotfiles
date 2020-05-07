@@ -66,9 +66,6 @@ Plug 'mattn/emmet-vim'
 " Plugin for vim-airline.
 Plug 'vim-airline/vim-airline'
 
-" To get the search count on airline
-Plug 'osyo-manga/vim-anzu'
-
 " Plugin to use themes for vim-airline.
 Plug 'vim-airline/vim-airline-themes'
 
