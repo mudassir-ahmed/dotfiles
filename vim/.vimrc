@@ -60,9 +60,6 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 " Preview colours in source code for support languages while editing.
 Plug 'ap/vim-css-color'
 
-" Emmet plugin for vim.
-Plug 'mattn/emmet-vim'
-
 " Plugin for vim-airline.
 Plug 'vim-airline/vim-airline'
 
