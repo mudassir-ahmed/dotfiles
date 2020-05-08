@@ -207,8 +207,18 @@ set splitright
 " z= to get suggestions to fix spelling mistake
 " set spell spelllang=en
 
-"make jj do esc
-inoremap jj <Esc>
+" esc in insert mode - jk cancel each other out in normal mode
+inoremap kj <esc>
+inoremap jk <esc>
+
+" esc in command mode
+cnoremap kj <C-C>
+cnoremap jk <C-C>
+
+" esc in terminal mode - return to 'normal' mode from terminal mode
+tnoremap <Esc> <C-\><C-n>
+tnoremap kj <C-\><C-n>
+tnoremap jk <C-\><C-n>
 
 " Stop using backspace in insert mode
 inoremap <BS> <Nop>
@@ -241,6 +251,10 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-l> <C-\><C-N><C-w>l
 
 " Autofix some mistakes
 cab W  w 
@@ -308,6 +322,11 @@ set shortmess+=c
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
+
+" Enable termdebug - including gdb 
+let g:termdebug_popup = 0
+let g:termdebug_wide = 163
+packadd termdebug
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
