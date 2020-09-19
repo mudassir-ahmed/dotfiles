@@ -19,7 +19,18 @@ sudo apt install git vim zsh xclip stow curl npm docker.io docker-compose exuber
 
 
 ## Install some nice programs
-sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock
+sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock jq sshfs ripgrep bat httpie
+
+
+## Set up npm
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+
+
+# Install some commonly used npm packages
+npm install jest --global
+npm install gtop --global
+npm install typescript --global
 
 
 ## Install alacritty dependancies
@@ -37,11 +48,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ## Set up docker
 sudo groupadd docker
 sudo usermod -aG docker $USER
-
-
-## Set up npm
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
 
 
 ## Setup
