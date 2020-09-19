@@ -29,6 +29,7 @@ source ~/.ENV
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  gradle
   docker
   docker-compose
   zsh-autosuggestions
@@ -39,8 +40,8 @@ plugins=(
   node
   last-working-dir
   web-search
+  frontend-search
   vi-mode
-  magic-enter
 )
 
 PATH=$PATH:/snap/bin # gets nvim working over ssh
@@ -59,6 +60,7 @@ if [ $? -eq 0 ]; then
     export VISUAL=$(which nvim)
     # Default to vim to nvim
     alias vim="$EDITOR"
+    alias  vi="$EDITOR"
     alias vimtutor="$EDITOR -c Tutor"
 fi
 
@@ -66,9 +68,10 @@ fi
 # Aliases {{{
 
 # Find commands quicker
-# Notice the space - this won't add the history command to your history
-# Otherwise could lead to inception :)
-alias hg=' history | grep'
+alias h='`history | sed "s/^ *[^ ]* *//" | sort | uniq | fzf`'
+
+# Install quicker
+alias i='sudo apt install'
 
 # Quick directory changes
 alias  dotfiles="cd $DOTFILES"
@@ -77,6 +80,7 @@ alias downloads="cd ~/Downloads"
 alias    github='cd ~/git/github'
 alias    gitlab='cd ~/git/gitlab'
 alias   scripts="cd ~/bin/scripts"
+alias      repo='cd ~/git/`cd ~/git && ls -d1 */* | fzf`'
 
 # Edit quicker
 alias v="$EDITOR"
@@ -98,6 +102,9 @@ alias  gs='git status'
 
 # Git tree
 alias gtree='git ls-tree -r --name-only HEAD | tree -a --fromfile'
+
+# Docker clean state
+alias docker-reset='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 # Quick configs
 alias       zshconfig="$EDITOR $DOTFILES/zsh/.zshrc"
@@ -136,6 +143,8 @@ PATH=$PATH:$HOME/bin/opencv
 PATH=$PATH:$HOME/bin/opencv_contrib
 PATH=$PATH:$HOME/bin/opencv-build
 PATH=$PATH:$HOME/bin/scripts
+PATH=$PATH:$HOME/bin/depot_tools
+PATH=$PATH:$HOME/bin/idea-IU-201.8538.31/bin
 export PATH
 
 # Homebrew 
@@ -165,7 +174,21 @@ source $ZSH/oh-my-zsh.sh
 # SSH 
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# Theme used for bat command (one dark)
+export BAT_THEME="OneHalfDark"
+
+# Theme used for fzf (one dark)
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--color=dark
+--color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
+--color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
+'
+
 # Fix Hyper first line precent sign
 # https://github.com/zeit/hyper/issues/2144
 # https://superuser.com/questions/645599/why-is-a-percent-sign-appearing-before-each-prompt-on-zsh-in-windows
 # unsetopt PROMPT_SP
+
+# Gradle
+# source script that updates PATH
+source /etc/profile.d/gradle.sh
