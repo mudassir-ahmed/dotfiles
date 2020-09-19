@@ -7,7 +7,19 @@ export ZSH="/home/mudassir/.oh-my-zsh"
 # Set name of the theme to load
 ZSH_THEME="spaceship"
 POWERLEVEL9K_MODE='nerdfont-complete'
-SPACESHIP_VI_MODE_SHOW=false
+
+# Spaceship only show normal mode indicator
+SPACESHIP_VI_MODE_SHOW=true
+SPACESHIP_VI_MODE_PREFIX=""
+SPACESHIP_VI_MODE_SUFFIX=""
+SPACESHIP_VI_MODE_INSERT=""
+SPACESHIP_VI_MODE_NORMAL=""
+
+# Use a more aesthetic git branch symbol
+SPACESHIP_GIT_SYMBOL="שׂ "
+
+# Change some symbols used by spaceship
+SPACESHIP_PACKAGE_SYMBOL=" "
 
 # Load environment variables
 source ~/.ENV
