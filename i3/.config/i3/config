@@ -32,7 +32,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-set $terminal gnome-terminal
+set $terminal alacritty
 bindsym $mod+Return exec $terminal
 
 
@@ -188,10 +188,11 @@ set $indicator           #ffffff
 set $bar-bg-color        #1d1d1d73 
 set $bg-color 	         #1d1d1d73 
 set $inactive-bg-color   #1d1d1d73 
+set $active-bg-color     #00bcd4
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $indicator
+client.focused          $active-bg-color    $active-bg-color          $text-color          $indicator
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
 client.placeholder      $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator
@@ -207,7 +208,7 @@ bar {
     separator_symbol "   "
     tray_padding 4
     tray_output primary
-    # font pango:DejaVu Sans Mono 10
+    font pango:System San Francisco Display, Font Awesome 5 Free 8
     # workspace_buttons no
 	height 25
 	# strip_workspace_numbers yes
@@ -227,8 +228,8 @@ bar {
 }
 
 # Set border style
-default_border none
-for_window [class=.*] border none
+default_border pixel 1
+for_window [class=.*] border pixel 1
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -247,7 +248,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # launch wallpaper on i3 startup and reload
-exec_always --no-startup-id feh --bg-scale ~/.config/i3/background.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/i3/background.jpg
 
 # Assign Goolge Chrome to workspace 2
 #assign [class="^Google-chrome$"] $ws2
@@ -259,19 +260,11 @@ bindsym       Print exec gnome-screenshot
 # Shortcut to open Google Chrome.
 bindsym $mod+g exec google-chrome
 
-# Scratchpad terminal
-set $scratch_term_wrole "scratchpad_terminal"
-bindsym $mod+Shift+F12 move scratchpad
-bindsym $mod+Shift+Return scratchpad show;[window_role=$scratch_term_wrole] move position center
-# Get the scratchpad terminal ready
-exec --no-startup-id gnome-terminal --role=$scratch_term_wrole
-for_window [window_role=$scratch_term_wrole] move scratchpad
-for_window [window_role=$scratch_term_wrole] resize set 800 450
-
 # i3-gaps configuration
 gaps inner 12
 gaps outer 0
-for_window [class="^.*"] border none
+# Only show gaps if there is more than one window
+smart_gaps on
 
 # Assign workspaces to different monitors
 workspace $ws1 output DVI-D-0
@@ -283,3 +276,6 @@ workspace_auto_back_and_forth yes
 # Compton - compositor for X11
 exec_always --no-startup-id compton --shadow-exclude 'bounding_shaped && !rounded_corners'
 
+# xrandr setup for tray which is set to the primary window
+# note you may need to change this
+exec_always --no-startup-id xrandr --output HDMI-0 --primary
