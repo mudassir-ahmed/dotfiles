@@ -1,0 +1,15 @@
+priority -100
+
+snippet meta(data) "Markdown metadata front matter"
+---
+title: ${1:title}
+excerpt: ${2:excerpt}
+hero: ${3:/public/assets/images/example.jpg}
+alt: ${4:alt}
+date: "`strftime("%Y-%m-%d %H:%M:%S")`"
+tags:
+  - ${5:javascript}
+---
+
+${6:body}
+
