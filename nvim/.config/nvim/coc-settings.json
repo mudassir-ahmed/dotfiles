@@ -1,6 +1,7 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
+    "scss",
     "markdown",
     "javascript",
     "typescript",
@@ -8,5 +9,10 @@
     "vue"
   ],
   "clangd.path": "/usr/bin/clangd-10",
-  "clangd.arguments": ["--header-insertion=/usr/local/include/"]
+  "clangd.arguments": [],
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    // Note: to get css emmet completion working use: set ft=javascript.css
+    "javascript": "javascriptreact" // Allow use of css emmet abbreviations in javascript files (react components for example)
+  }
 }
