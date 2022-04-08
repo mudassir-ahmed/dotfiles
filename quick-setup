@@ -19,7 +19,11 @@ sudo apt install git vim zsh xclip stow curl npm docker.io docker-compose exuber
 
 
 ## Install some nice programs
-sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock jq sshfs ripgrep bat httpie
+sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock jq sshfs ripgrep bat httpie net-tools
+
+
+## Install sdkman
+curl -s "https://get.sdkman.io" | bash
 
 
 ## Set up npm
@@ -46,6 +50,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 
 ## Set up docker
+## Note: Restart is required to see changes for current user
 sudo groupadd docker
 sudo usermod -aG docker $USER
 
@@ -56,6 +61,9 @@ touch ~/.ENV
 
 ## Install oh my zsh 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+## Make zsh the default shell
+chsh -s $(which zsh)
 
 
 ## Download zsh-autosuggestions plugin
