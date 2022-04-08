@@ -5,6 +5,7 @@
 # Note:
 # Setting up ssh for git might save you time
 # You may need to log out to see certain changes
+# This script only installs CLI apps for better portability
 
 # TODO: stow the minimal configs
 # TODO: add minimal option
@@ -19,7 +20,7 @@ sudo apt install git vim zsh xclip stow curl npm docker.io docker-compose exuber
 
 
 ## Install some nice programs
-sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock jq sshfs ripgrep bat httpie net-tools
+sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock jq sshfs ripgrep bat httpie net-tools fzf
 
 
 ## Install sdkman
@@ -36,13 +37,6 @@ npm install jest --global
 npm install gtop --global
 npm install typescript --global
 
-
-## Install alacritty dependancies
-sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
-
-
-## Install alacritty
-# TODO: add alacritty install script
 
 ## Install vim plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
