@@ -1,0 +1,20 @@
+#!/bin/env bash
+
+# This script finds the git remote
+# for each directory in the current
+# working directory.
+
+for DIR in `ls`
+do
+
+  if [ ! -d "$DIR" ]; then
+    echo not a directory: $DIR
+    continue
+  fi
+
+  cd $DIR
+  remote=`git config --get remote.origin.url`
+
+  echo $remote
+  cd ..
+done
