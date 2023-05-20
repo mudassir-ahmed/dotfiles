@@ -4,8 +4,9 @@ DOTFILES="~/dotfiles"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mudassir/.oh-my-zsh"
 
+
 # Set name of the theme to load
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Spaceship only show normal mode indicator
@@ -21,6 +22,10 @@ SPACESHIP_GIT_SYMBOL="שׂ "
 # Change some symbols used by spaceship
 SPACESHIP_PACKAGE_SYMBOL=" "
 
+# SPACESHIP_PROMPT_ORDER=(
+#   git
+# )
+
 # Load environment variables
 source ~/.ENV
 
@@ -29,19 +34,25 @@ source ~/.ENV
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  gradle
+  aws
+  colored-man-pages
   docker
   docker-compose
+  extract
+  frontend-search
+  gradle
+  kubectl
+  last-working-dir
+  minikube
+  node
+  npm
+  terraform
+  vault
+  vi-mode
+  web-search
+  you-should-use
   zsh-autosuggestions
   zsh-syntax-highlighting
-  extract
-  colored-man-pages
-  npm
-  node
-  last-working-dir
-  web-search
-  frontend-search
-  vi-mode
 )
 
 PATH=$PATH:/snap/bin # gets nvim working over ssh
@@ -49,20 +60,26 @@ PATH=$PATH:/snap/bin # gets nvim working over ssh
 # Allows hidden files to be matched without explicity specifying the dot
 setopt globdots
 
-# Default editors
-export EDITOR=$(which vim)
-export VISUAL=$(which vim)
+# https://unix.stackexchange.com/questions/19530/expanding-variables-in-zsh
+set -o shwordsplit
 
 # But we prefer neovim if installed
-which nvim > /dev/null
-if [ $? -eq 0 ]; then
-    export EDITOR=$(which nvim)
-    export VISUAL=$(which nvim)
-    # Default to vim to nvim
-    alias vim="$EDITOR"
-    alias  vi="$EDITOR"
-    alias vimtutor="$EDITOR -c Tutor"
-fi
+#alias nvim="$HOME/Desktop/nvim.appimage"
+# Default editors
+export EDITOR=$(which nvim)
+export VISUAL=$(which nvim)
+alias v="nvim"
+alias vim="nvim"
+
+# which nvim > /dev/null
+# if [ $? -eq 0 ]; then
+#     export EDITOR=$(which nvim)
+#     export VISUAL=$(which nvim)
+#     # Default to vim to nvim
+#     alias vim="$EDITOR"
+#     alias  vi="$EDITOR"
+#     alias vimtutor="$EDITOR -c Tutor"
+# fi
 
 
 # Aliases {{{
@@ -80,7 +97,7 @@ alias downloads="cd ~/Downloads"
 alias    github='cd ~/git/github'
 alias    gitlab='cd ~/git/gitlab'
 alias   scripts="cd ~/bin/scripts"
-alias      repo='cd ~/git/`cd ~/git && ls -d1 */* | fzf`'
+alias      repo='cd ~/git/`cd ~/git && ls | fzf`'
 
 # Edit quicker
 alias v="$EDITOR"
@@ -107,28 +124,19 @@ alias gtree='git ls-tree -r --name-only HEAD | tree -a --fromfile'
 alias docker-reset='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 # Quick configs
+# TODO: make this a fz script instead
 alias       zshconfig="$EDITOR $DOTFILES/zsh/.zshrc"
 alias        i3config="$EDITOR $DOTFILES/i3/.config/i3/config"
 alias       vimconfig="$EDITOR $DOTFILES/vim/.vimrc"
+alias      nvimconfig="$EDITOR $DOTFILES/nvim/.config/nvim/init.lua"
 alias      codeconfig="$EDITOR $DOTFILES/vscode/.config/Code/User/settings.json"
 alias       gtkconfig="$EDITOR $DOTFILES/gtk-theme/.config/gtk-3.0/gtk.css"
 alias      roficonfig="$EDITOR $DOTFILES/rofi/.config/rofi/config"
 alias        rtconfig="$EDITOR $DOTFILES/rofi/.config/rofi/themes/custom-nord.rasi"
 alias   comptonconfig="$EDITOR $DOTFILES/compton/.config/compton.conf"
 alias alacrittyconfig="$EDITOR $DOTFILES/alacritty/.config/alacritty/alacritty.yml"
-
-# Sound config
-alias soundconfig='pavucontrol'
-
-# Weather
-alias weather='curl wttr.in'
-
-# Run script that launches uom workspace
-alias uomws='~/.config/i3/init-workspace-uom'
-
-# SSH
-alias uom='ssh mmappmab@kilburn.cs.manchester.ac.uk'
-alias uomx='ssh -X mmappmab@kilburn.cs.manchester.ac.uk'
+alias tmuxconfig="$EDITOR $DOTFILES/tmux/.config/tmux/tmux.conf"
+alias starshipconfig="$EDITOR $DOTFILES/starshipconfig/.config/starship.toml"
 
 # }}}
 
@@ -136,26 +144,19 @@ alias uomx='ssh -X mmappmab@kilburn.cs.manchester.ac.uk'
 # My path customisations
 PATH=$PATH:/usr/bin/local
 PATH=$PATH:$HOME/.npm-global/bin
-PATH=$PATH:$HOME/opt/flutter/bin
-PATH=$PATH:$HOME/opt/android-studio/bin
-PATH=$PATH:$HOME/bin/clion-2019.3.4/bin
 PATH=$PATH:$HOME/bin/opencv
 PATH=$PATH:$HOME/bin/opencv_contrib
 PATH=$PATH:$HOME/bin/opencv-build
 PATH=$PATH:$HOME/bin/scripts
-PATH=$PATH:$HOME/bin/depot_tools
-PATH=$PATH:$HOME/bin/idea-IU-201.8538.31/bin
+PATH=$PATH:$HOME/git/lua-language-server/bin
+PATH=$PATH:/usr/local/bin/aws_completer
 export PATH
-
-# Homebrew 
-# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
-# Update search path environment variable for linux shared library
-# Fix for opencv library missing issue when compiling
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 
 # Source zsh
 source $ZSH/oh-my-zsh.sh
+
+# https://superuser.com/questions/685005/tmux-in-zsh-with-vi-mode-toggle-cursor-shape-between-normal-and-insert-mode
+export VI_MODE_SET_CURSOR=true
 
 # User configuration
 
@@ -189,6 +190,29 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 # https://superuser.com/questions/645599/why-is-a-percent-sign-appearing-before-each-prompt-on-zsh-in-windows
 # unsetopt PROMPT_SP
 
-# Gradle
-# source script that updates PATH
-source /etc/profile.d/gradle.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/mudassir/.sdkman"
+[[ -s "/home/mudassir/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mudassir/.sdkman/bin/sdkman-init.sh"
+
+NODE_PATH="/usr/local/lib/node_modules" 
+
+
+
+# https://github.com/chromium/chromium/blob/master/docs/linux/build_instructions.md
+export PATH="$PATH:$HOME/bin/depot_tools"
+
+alias luamake=/home/mudassir/git/lua-language-server/3rd/luamake/luamake
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+export do="--dry-run=client -o yaml"
+alias kn="k config set-context --current --namespace "
+export now="--force --grace-period=0"
+
+
+eval "$(starship init zsh)"
