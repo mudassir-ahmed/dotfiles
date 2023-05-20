@@ -20,7 +20,7 @@ sudo apt install git vim zsh xclip stow curl npm docker.io docker-compose exuber
 
 
 ## Install some nice programs
-sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock jq sshfs ripgrep bat httpie net-tools fzf
+sudo apt install fzf locate neofetch figlet cowsay lolcat fswatch ranger vlc tree cheat htop neofetch tty-clock jq sshfs ripgrep bat httpie net-tools fzf ripgrep
 
 
 ## Install sdkman
@@ -36,6 +36,9 @@ npm config set prefix '~/.npm-global'
 npm install jest --global
 npm install gtop --global
 npm install typescript --global
+
+# Install tldr
+npm install -g tldr
 
 
 ## Install vim plug
