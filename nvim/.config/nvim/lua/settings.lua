@@ -52,7 +52,7 @@ opt.expandtab = true
 opt.shiftwidth = 2
 
 -- Search subfolders.
---opt.path += "**"
+-- opt.path = opt.path .. "**"
 
 -- No double spaces with join.
 opt.joinspaces = false
@@ -60,7 +60,19 @@ opt.joinspaces = false
 -- True color support.
 opt.termguicolors = true
 
+-- Give more space for displaying messages.
+opt.cmdheight = 2
 
+-- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+-- delays and poor user experience.
+opt.updatetime = 300
 
+-- Always show the signcolumn, otherwise it would shift the text each time
+-- diagnostics appear/become resolved.
+opt.signcolumn = "yes"
 
+-- No redraws in macros.
+opt.lazyredraw = true
 
+-- Give more space for displaying messages.
+opt.cmdheight = 2
