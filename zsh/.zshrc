@@ -32,6 +32,7 @@ plugins=(
   you-should-use
   zsh-autosuggestions
   zsh-syntax-highlighting
+  magic-enter
 )
 
 # Allows hidden files to be matched without explicity specifying the dot
