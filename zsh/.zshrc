@@ -2,11 +2,7 @@
 DOTFILES="~/dotfiles"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mudassir/.oh-my-zsh"
-
-
-# Load environment variables
-source ~/.ENV
+export ZSH="$HOME/.oh-my-zsh"
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -102,7 +98,7 @@ alias        rtconfig="$EDITOR $DOTFILES/rofi/.config/rofi/themes/custom-nord.ra
 alias   comptonconfig="$EDITOR $DOTFILES/compton/.config/compton.conf"
 alias alacrittyconfig="$EDITOR $DOTFILES/alacritty/.config/alacritty/alacritty.yml"
 alias tmuxconfig="$EDITOR $DOTFILES/tmux/.config/tmux/tmux.conf"
-alias starshipconfig="$EDITOR $DOTFILES/starshipconfig/.config/starship.toml"
+alias starshipconfig="$EDITOR $DOTFILES/starship/.config/starship.toml"
 
 # }}}
 
@@ -140,3 +136,7 @@ export now="--force --grace-period=0"
 
 
 eval "$(starship init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
