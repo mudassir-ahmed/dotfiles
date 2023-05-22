@@ -5,8 +5,11 @@ error_symbol = '[➜](bold red)'
 vimcmd_symbol = '[➜](bold purple)'
 
 [git_branch]
-symbol = 'שׂ '
+symbol = ' '
 
 [terraform]
-#symbol = \udb84\udc62
+symbol = '󱁢 '
 #format = '[🏎💨 $workspace]($style) '
+
+[aws]
+symbol = ' '
