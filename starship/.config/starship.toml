@@ -13,3 +13,8 @@ symbol = '󱁢 '
 
 [aws]
 symbol = ' '
+
+[custom.foo]
+command = 'echo dotfiles drift detected' # shows output of command
+when = ''' $(cd $HOME/dotfiles; git diff --exit-code > /dev/null); test "$?" = "1" '''
+format = ' also   [$output](bold red) '
